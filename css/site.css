@@ -1,0 +1,63 @@
+body {
+	color: #000;
+	font: normal 1em/normal bryant-web, 'Helvetica Neue', Helvetica, Arial, Serif;
+	background-color: #000;
+	/*
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), to(transparent));
+	background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+	background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+	background-image: -ms-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+	background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);	
+	*/
+	}
+article {
+	margin: 18px 0;
+	}
+	article:before {content: ':article';}
+	header {}
+		header:before {content: ':header';}
+/*------------------------
+Defaults
+-------------------------*/
+a,
+a:link {
+	color: #fff;
+	text-decoration: underline;
+	}
+a,
+a:visited,
+a:hover {
+	color: #ccc;
+	}
+
+/*------------------------
+structure
+-------------------------*/
+body > header {
+	width: 960px;
+	margin: 0 auto;
+	}
+#container {
+	outline: 2px dotted #ff00ff;
+	overflow: auto;
+	width: 960px;
+	margin: 0 auto;
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	}
+
+	aside#secondary,
+	section#primary,
+	aside#myLikes {
+		outline: 1px dotted #fff;
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		box-flex: 1;
+		}
+	section#primary {
+		-webkit-box-flex: 2;
+		-moz-box-flex: 2;
+		box-flex: 2;
+		}	

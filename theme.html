@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="color:Background" content="#000000"/>
+	<meta name="color:Link" content="#ba0b00"/>
+	<meta name="color:Link Visited" content="#d4674b"/>
+	<meta name="color:Border" content="#c8c49f"/>
+	<meta name="if:Show Avatar" content="1"/>
+	<meta name="if:Show People I Follow" content="1"/>
+	<meta name="if:Show People I Follow" content="1"/>
+	<meta name="if:Show People I Follow" content="1"/>
+	<meta name="text:Disqus Shortname" content="" />
+	<meta name="image:Background" content=""/>
+
+	<title>{block:PostTitle}{PostTitle} | {/block:PostTitle}{Title}</title>
+
+	<title>{block:SearchPage}Search results for: {SearchQuery} | {/block:SearchPage}{block:PostSummary}{PostSummary} | {/block:PostSummary}{Title}</title>
+	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+	<link rel="alternate" type="application/rss+xml" href="{RSS}" />
+	<link rel="shortcut icon" href="{Favicon}">
+	
+	<link rel="stylesheet" href="http://local.tumblr.com/css/reset.css" />
+	<link rel="stylesheet" href="http://local.tumblr.com/css/site.css" />
+	<style type="text/css">
+		body {
+			background-color: {color:Background};
+			{block:IfBackgroundImage}
+				background-image: url('{image:Background}');
+			{/block:IfBackgroundImage}
+			}
+		{CustomCSS}
+	</style>
+	<!--Make IE like HTML5-->
+	<!--[if IE]><script>document.createElement("header");document.createElement("footer");document.createElement("nav");document.createElement("article");document.createElement("section");document.createElement("aside");</script>	<![endif]-->
+</head>
+<body>
+	<header>
+		<h1><a href="/">{Title}</a></h1>
+	</header>
+	<div id="container">
+		<aside id="secondary">
+			{block:IfShowAvatar}
+			<img src="{PortraitURL-128}">
+			{/block:IfShowAvatar}
+			<div>
+				{Description}
+			</div>
+			<nav>
+			{block:HasPages}
+				<hr>
+				<ul id="pages">
+					{block:Pages}
+					<li><a href="{URL}">{Label}</a></li>
+					{/block:Pages}
+				</ul>
+			{/block:HasPages}
+				<ul>
+					{block:AskEnabled}
+					<li><a href="/ask">{AskLabel}</a></li>
+					{/block:AskEnabled}
+					<li><a href="/archive">Archive</a></li>
+					<li><a href="/mobile">Mobile</a></li>
+					<li><a href="{RSS}">RSS</a></li>
+				</ul>
+			</nav>
+		</aside>
+		<section id="primary">
+            {block:SearchPage}
+                <h1>{SearchResultCount} results for <strong>"{SearchQuery}"</strong></h1>
+            {/block:SearchPage}
+
+			{block:Posts}
+
+			{block:Text}
+			<article class="text">
+				<header>
+					<p><a href="{Permalink}">{block:Date}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{Month} {DayOfMonthWithZero}, {Year}</time>{/block:Date}</a> &bull; Text Post</p>
+					{block:Title}
+				    <h1><a href="{Permalink}">{Title}</a></h1>
+					{/block:Title}
+				</header>
+				{Body}
+			{/block:Text}
+
+			{block:Photo}
+			<article class="photo">
+				<header>
+					<p>
+						<a href="{Permalink}">{block:Date}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{Month} {DayOfMonthWithZero}, {Year}</time>{/block:Date}</a> &bull; Photo Post
+					</p>
+				</header>
+
+				<div class="photo">
+					{LinkOpenTag}
+						<img src="{PhotoURL-500}" alt="{PhotoAlt}" />
+					{LinkCloseTag}
+				</div>
+
+				{block:Caption}
+				{Caption}
+				{/block:Caption}
+			{/block:Photo}
+
+			{block:Quote}
+			<article class="quote">
+				<header>
+					<p><a href="{Permalink}">{block:Date}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{Month} {DayOfMonthWithZero}, {Year}</time>{/block:Date}</a> &bull; Quote Post</p>
+				</header>
+
+				<blockquote>"{Quote}"</blockquote>
+				{block:Source}
+				<p>{Source}</p>
+				{/block:Source}
+			{/block:Quote}
+
+			{block:Link}
+			<article class="link">
+				<header>
+					<p><a href="{Permalink}">{block:Date}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{Month} {DayOfMonthWithZero}, {Year}</time>{/block:Date}</a> &bull; Link Post</p>
+				    <h1><a href="{URL}" {Target}>{Name} &rarr;</a></h1>
+				</header>
+				{block:Description}
+					{Description}
+				{/block:Description}
+			{/block:Link}
+			
+			{block:Answer}
+				<article class="answer">
+					<header>
+						<p><a href="{Permalink}">{block:Date}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{Month} {DayOfMonthWithZero}, {Year}</time>{/block:Date}</a> &bull; Answer Post</p>
+					</header>
+					<div class="by">
+						{Asker} asked ...
+					</div>
+					<div class="question">
+						{Question}
+					</div>
+					<div class="by">
+						... and I answered
+					</div>
+					<div class="answer">
+						{Answer}
+					</div>
+			{/block:Answer}
+			
+			{block:Chat}
+			<article class="chat">
+				<header>
+					<p><a href="{Permalink}">{block:Date}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{Month} {DayOfMonthWithZero}, {Year}</time>{/block:Date}</a> &bull; Chat Post</p>
+					{block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+				</header>
+				{block:Lines}
+				<p class="chat-line {Alt}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</p>
+				{/block:Lines}
+			{/block:Chat}
+
+			{block:Video}
+			<article class="video">
+				<header>
+					<p><a href="{Permalink}">{block:Date}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{Month} {DayOfMonthWithZero}, {Year}</time>{/block:Date}</a> &bull; Video Post</p>
+				</header>
+
+				{Video-500}
+
+				{block:Caption}
+				{Caption}
+				{/block:Caption}
+			{/block:Video}
+			
+			{block:Photoset}
+			<article class="photoset">
+				<header>
+					<p><a href="{Permalink}">{block:Date}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{Month} {DayOfMonthWithZero}, {Year}</time>{/block:Date}</a> &bull; Photoset Post</p>
+				</header>
+
+				{Photoset-500}
+
+				{block:Caption}
+				{Caption}
+				{/block:Caption}
+			{/block:Photoset}
+
+			{block:Audio}
+			<article class="audio">
+				<header>
+					<p><a href="{Permalink}">{block:Date}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{Month} {DayOfMonthWithZero}, {Year}</time>{/block:Date}</a> &bull; Audio Post</p>
+				</header>
+
+				{block:AlbumArt}
+				<img src="{AlbumArtURL}" alt="{block:Artist}{Artist}{/block:Artist}{block:TrackName} - {TrackName}{/block:TrackName}" />
+				{/block:AlbumArt}
+                    
+				<div class="player">{AudioPlayerGrey}</div>
+				
+				<p>{PlayCountWithLabel}</p>
+				{block:ExternalAudio}
+				<p><a href="{ExternalAudioURL}">Download</a></p>
+				{/block:ExternalAudio}
+				{block:Caption}{Caption}{/block:Caption}
+			{/block:Audio}
+
+            	{block:Permalink}
+				<section class="notes">
+					{block:PostNotes}
+					<h1>Notes</h1>
+					{PostNotes}
+					{/block:PostNotes}
+
+					{block:IfDisqusShortname}
+					<h1>Comments</h1>
+					<script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>
+					<div id="disqus_thread"></div>
+					<script type="text/javascript">
+					  (function() {
+					   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					   dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+					   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+					  })();
+					</script>
+					<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+					<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+                    {/block:IfDisqusShortname}
+				</section>
+                {/block:Permalink}
+
+				<footer>
+					<ul>
+
+						{block:RebloggedFrom}
+						<li class="reblogged"><a href="{ReblogParentURL}" title="Reblogged from {ReblogParentName}">Reblogged</a></li>
+						{/block:RebloggedFrom}
+
+						<li class="notes">
+	                        {block:NoteCount}
+	                        <a href="{Permalink}#notes">{NoteCountWithLabel}</a>, 
+							{/block:NoteCount}
+							{block:IfDisqusShortname}
+							<a href="{Permalink}#disqus_thread">comments</a>
+							{/block:IfDisqusShortname}
+                        </li>
+						{block:HasTags}
+						<li class="tagged">{block:Tags}<a href="{TagURL}">{Tag}</a> {/block:Tags}</li>
+						{/block:HasTags}
+					</ul>
+				</footer>
+
+			</article>    
+
+			{/block:Posts}
+
+			{block:Pagination}
+			<nav id="paging">
+				<p>Page {CurrentPage} of {TotalPages}</p>
+
+				{block:NextPage}
+				<a href="{NextPage}">&larr; Older</a>
+				{/block:NextPage}
+				{block:PreviousPage}
+				<a href="{PreviousPage}">Newer &rarr;</a>
+				{/block:PreviousPage}
+			</nav>
+			{/block:Pagination}
+
+		</section>
+		<aside id="myLikes">
+
+			<form id="searchForm" action="/search" method="get">
+				<input id="searchField" type="text" name="q" value="{SearchQuery}" />
+			</form>
+
+			{block:Likes}
+				<h1>Stuff I Like <a href="http://www.tumblr.com/liked/by/{Name}">&hearts;</a></h1>
+				{Likes limit="5" summarize="100" width="160"}
+			{/block:Likes}
+
+			{block:IfShowPeopleIFollow}
+			{block:Following}
+			<h1>Following</h1>
+			<ul id="following">
+			{block:Followed}<li><a href="{FollowedURL}" title="{FollowedTitle}"><img src="{FollowedPortraitURL-24}" /></a></li>{/block:Followed}
+			</ul>
+			{/block:Following}
+			{/block:IfShowPeopleIFollow}
+
+		</aside>
+	</div>	
+
+	<footer>
+	</footer>
+	
+	{block:IfDisqusShortname}
+	<script type="text/javascript">
+	var disqus_shortname = '{text:Disqus Shortname}';
+	(function () {
+	  var s = document.createElement('script'); s.async = true;
+	  s.src = 'http://disqus.com/forums/{text:Disqus Shortname}/count.js';
+	  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+	}());
+	</script>
+    {/block:IfDisqusShortname}
+</html>
