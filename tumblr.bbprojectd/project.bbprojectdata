@@ -7,6 +7,7 @@
 		<string>E0303E41-7F9E-4963-B584-3F8FDFF101DF</string>
 		<string>381AE8B4-0DCB-42FC-8785-E9F773FFCC56</string>
 		<string>D0A30488-C3DF-437C-A632-CFBC1ABA930D</string>
+		<string>F1438ED2-2355-418F-8A5C-D2FCEBABA8A7</string>
 	</array>
 	<key>ProjectItems</key>
 	<dict>
@@ -109,6 +110,40 @@
 			<string>css</string>
 			<key>ItemType</key>
 			<string>FolderReference</string>
+		</dict>
+		<key>F1438ED2-2355-418F-8A5C-D2FCEBABA8A7</key>
+		<dict>
+			<key>ItemData</key>
+			<dict>
+				<key>AliasData</key>
+				<data>
+				AAAAAAGWAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
+				AAAAAADJHtraSCsAAAi8tRwKUmVhZE1lLnR4dAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAACLzEm8sEvzRURVhUUipjaP//
+				//8AAAkgAAAAAAAAAAAAAAAAAAAABnR1bWJscgAQAAgA
+				AMkfISoAAAARAAgAAMsFBYQAAAABABQIvLUcBVbGiAVW
+				xj0ADwesAACTLAACAENNYWNpbnRvc2ggSEQ6VXNlcnM6
+				AGJpbGxrZWxsZXI6AERyb3Bib3g6AFB1YmxpYzoAdHVt
+				YmxyOgBSZWFkTWUudHh0AAAOABYACgBSAGUAYQBkAE0A
+				ZQAuAHQAeAB0AA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBo
+				ACAASABEABIAMVVzZXJzL2JpbGxrZWxsZXIvRHJvcGJv
+				eC9QdWJsaWMvdHVtYmxyL1JlYWRNZS50eHQAABMAAS8A
+				ABUAAgAR//8AAA==
+				</data>
+				<key>FileURL</key>
+				<string>file://localhost/Users/billkeller/Dropbox/Public/tumblr/ReadMe.txt</string>
+				<key>RelativePath</key>
+				<string>./ReadMe.txt</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+			<key>ItemName</key>
+			<string>ReadMe.txt</string>
+			<key>ItemType</key>
+			<string>FileReference</string>
 		</dict>
 	</dict>
 	<key>com.barebones.DocumentFormatVersion</key>
