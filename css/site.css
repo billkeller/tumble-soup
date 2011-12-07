@@ -1,63 +1,228 @@
 body {
 	color: #000;
-	font: normal 1em/normal bryant-web, 'Helvetica Neue', Helvetica, Arial, Serif;
-	background-color: #000;
-	/*
-	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), to(transparent));
-	background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
-	background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
-	background-image: -ms-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
-	background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
-	background-image: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);	
-	*/
+	font-size: 100%;
+	background-color: #fff;
+	padding: 46px 0;
 	}
-article {
-	margin: 18px 0;
-	}
-	article:before {content: ':article';}
-	header {}
-		header:before {content: ':header';}
 /*------------------------
 Defaults
 -------------------------*/
 a,
-a:link {
-	color: #fff;
+a:link,
+a:visited {
+	color: #999;
 	text-decoration: underline;
 	}
-a,
-a:visited,
-a:hover {
-	color: #ccc;
+a:hover,
+a:active,
+a:focus {
+	color: #000;
+	text-decoration: underline;
 	}
-
 /*------------------------
-structure
+General structure
 -------------------------*/
-body > header {
-	width: 960px;
-	margin: 0 auto;
-	}
 #container {
-	outline: 2px dotted #ff00ff;
-	overflow: auto;
-	width: 960px;
+	width: 978px;
+	width: 880px;
 	margin: 0 auto;
-	display: -webkit-box;
-	display: -moz-box;
-	display: box;
+	overflow: auto;
+	padding: 0 10px 0 36px; /* right margin of each article + the right padding here = 36px */
 	}
-
 	aside#secondary,
-	section#primary,
-	aside#myLikes {
-		outline: 1px dotted #fff;
-		-webkit-box-flex: 1;
-		-moz-box-flex: 1;
-		box-flex: 1;
+	section#primary {width: 200px;}
+	section#primary {width: auto;}
+article {
+	border: 1px solid #ccc;
+	float: left;
+	padding: 6px;
+	margin: 0 26px 26px 0;
+	width: 286px;
+	max-width: 286px;
+	width: 250px;
+	max-width: 250px;
+	overflow: hidden;
+	font: normal 1em/18px 'Helvetica Neue', Helvetica, Arial,sans-serif;
+	z-index: 1;
+	background-color: #fff;
+	}
+	/* our photoset widths need to be made a touch smaller, so they fit Tumblrs options */
+	article.photoset {width: 250px;}
+	div.html_photoset + p {display: none;}
+	/*--------------------------------------------------
+	used on individual posts
+	---------------------------------------------------*/
+	body.permalinkpage section#primary article,
+	body.permalinkpage section#primary article.photoset {
+		max-width: none;
+		width: auto;
 		}
-	section#primary {
-		-webkit-box-flex: 2;
-		-moz-box-flex: 2;
-		box-flex: 2;
-		}	
+article:hover {z-index: 2;}
+nav#paging,
+.notes {
+	font: normal .9em Helvetica, Arial,sans-serif;
+	color: #939598;
+	}
+.notes li {margin-bottom: 9px;}
+.notes li img {vertical-align: -3px;}
+
+/*--------------------------------------------------
+Notes, paging, article footers
+---------------------------------------------------*/
+article.notes {border-style: none;}
+	section.notes > h4 {
+		text-transform: uppercase;
+		font-size: 1.1em;
+		margin-bottom: 9px;
+		}
+
+nav#paging p,
+.notes {margin-bottom: 9px;}
+
+/* info bits across the bottom of each post */
+article > footer {
+	display: none;
+	font: normal .8em Helvetica, Arial,sans-serif;
+	color: #939598;
+	color: #666;
+	}
+	article > footer > *:first-child {margin-top: 9px;}
+	article > footer > *:last-child {margin-bottom: 9px;}
+	article > footer p,
+	article > footer blockquote {margin-bottom: 9px;}
+
+/*--------------------------------------------------
+Display the footer in a couple of scenarios:
+---------------------------------------------------*/
+article:hover > footer,
+.permalinkpage article > footer,
+article:hover > section.notes {
+	display: block;
+	}
+/*--------------------------------------------------
+QUOTES
+---------------------------------------------------*/
+article.quote blockquote,
+article.quote > p {
+	font: bold 2.5em/32px 'Helvetica Neue', Helvetica, Arial,sans-serif;
+	color: #fff;
+	background-color: #000;
+	padding: 9px;
+	}
+	article.quote > p:before {
+		content: "- ";
+		padding-top: ;
+		}
+nav#paging {
+	float: none;
+	clear: both;
+	}
+/*------------------------------------------
+Blog title / header across the top
+--------------------------------------------*/
+header#home {
+	width: 952px;
+	width: 880px;
+	padding: 0 10px 0 36px;
+	margin: 0 auto 18px;
+	overflow: auto;
+	}
+header#home div {
+	float: left;
+	width: 500px;
+	}
+	header#home h1 {
+		font: bold 6em/77px 'Helvetica Neue', Helvetica, Arial,sans-serif;
+		text-transform: uppercase;
+		letter-spacing: -.1em;
+		}
+	header#home h2 {
+		color: #636363;
+		font-size: 1em;
+		font-weight: normal;
+		}
+		header#home a,
+		header#home a:link,
+		header#home a:visited {
+			color: #000;
+			text-decoration: none;
+			}
+		header#home a:hover,
+		header#home a:active,
+		header#home a:focus {
+			color: #ccc;
+			color: #666;
+			text-decoration: none;
+			}
+	header#home aside {
+		float: right;
+		width: 230px;
+		margin-right: 39px;
+		}
+	header#home form {float: right;}
+	header form input[type="text"] {
+		width: 150px;
+		margin: 0 0 0 5px;
+		border: 1px solid #000;
+		float: left;
+		}
+	form#searchForm {display: none;}
+	header form button {
+		float: left;
+		text-indent: -9999px;
+		background: url(http://dl.dropbox.com/u/3915166/tumblr/search_icon.png) 0 0 no-repeat transparent;
+		width: 15px;
+		height: 19px;
+		border-style: none;
+		}
+	header form button:hover {opacity: .5;}
+header#home nav {
+	float: right;
+	margin-bottom: 18px;
+	text-transform: uppercase;
+	}
+header#home nav li {
+	font: bold 1.8em/26px 'Helvetica Neue', Helvetica, Arial,sans-serif;
+	text-align: right;
+	}
+header#home nav > ul a,
+header#home nav > ul a:link,
+header#home nav > ul a:visited {
+	color: #000;
+	text-decoration: none;
+	}
+header#home nav > ul a:hover,
+header#home nav > ul a:active,
+header#home nav > ul a:focus {
+	color: #ccc;
+	color: #666;
+	}
+/*------------------------------------------
+dates, date links
+ top left of each article
+--------------------------------------------*/
+#primary header {
+	display: none;
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	text-transform: uppercase;
+	font: bold 3em/38px 'Helvetica Neue', Helvetica, Arial,sans-serif;
+	letter-spacing: -.01em;
+	background-color: hsla(0, 100%, 100%, .6);
+	padding: 6px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	}
+	#primary article:hover header {display: inline;}
+#primary header a,
+#primary header a:link,
+#primary header a:visited {
+	color: #000;
+	text-decoration: none;
+	text-shadow: #fff 2px 2px 1px;
+	}
+/*--------------
+photos
+---------------*/
+div.photo img {display: block;}

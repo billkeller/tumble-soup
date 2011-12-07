@@ -1,0 +1,62 @@
+/*------------------------
+Fonts
+-------------------------*/
+@font-face {
+    font-family: 'HeydingsCommonIcons';
+    src: url('http://dl.dropbox.com/u/3915166/tumblr/fonts/heydings_icons-webfont.eot');
+    src: url('http://dl.dropbox.com/u/3915166/tumblr/fonts/heydings_icons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://dl.dropbox.com/u/3915166/tumblr/fonts/heydings_icons-webfont.woff') format('woff'),
+         url('http://dl.dropbox.com/u/3915166/tumblr/fonts/heydings_icons-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ul.ui-icons {
+	overflow: auto;
+	margin-bottom: 6px;
+	}
+	ul.ui-icons li {
+		display: block;
+		float: left;
+		padding-right: 4px;
+		}
+		ul.ui-icons li:last-child {padding-right: 0;}
+	/*--------------------------------------------------
+	apply to ALL ui-icons list items
+	---------------------------------------------------*/
+	ul.ui-icons li:before {
+		font-family:'HeydingsCommonIcons';
+		font-size: 14px;
+		}
+		
+		/*--------------------------------------------------
+		Here we get into the specific icons:
+		http://www.heydonworks.com/a-free-icon-web-font
+		
+		TAG
+		---------------------------------------------------*/
+		li.ui-tag:first-child:before {
+			content: 't ';
+			color: #939598;
+			}
+		/* add commas */
+		li.ui-tag:after {content: ',';}
+		li.ui-tag:last-child:after {content: '';}
+
+		/*--------------------------------------------------
+		NOTES
+		---------------------------------------------------*/
+		li.ui-notes:first-child:before {
+			content: 'o ';
+			color: #939598;
+			}
+
+		/*--------------------------------------------------
+		REBLOGGED
+		---------------------------------------------------*/
+		li.ui-reblogged:first-child:before {
+			content: 'a ';
+			color: #939598;
+			}
+		
+		

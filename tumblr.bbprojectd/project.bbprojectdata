@@ -5,8 +5,8 @@
 	<key>HierarchyData</key>
 	<array>
 		<string>E0303E41-7F9E-4963-B584-3F8FDFF101DF</string>
-		<string>6F0AA598-A7F5-4820-8AD6-F89DA8B2C088</string>
 		<string>381AE8B4-0DCB-42FC-8785-E9F773FFCC56</string>
+		<string>D0A30488-C3DF-437C-A632-CFBC1ABA930D</string>
 	</array>
 	<key>ProjectItems</key>
 	<dict>
@@ -16,21 +16,22 @@
 			<dict>
 				<key>AliasData</key>
 				<data>
-				AAAAAAF+AAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
-				AAAAAADJHtraSCsAAAWL/bcKdGhlbWUuaHRtbAAAAAAA
+				AAAAAAGWAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
+				AAAAAADJHtraSCsAAAi8tRwKdGhlbWUuaHRtbAAAAAAA
 				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAABYv9u8pptrNURVhUUipjaP//
+				AAAAAAAAAAAAAAAAAAAACLy1rssDz5NURVhUUipjaP//
 				//8AAAkgAAAAAAAAAAAAAAAAAAAABnR1bWJscgAQAAgA
-				AMkfISoAAAARAAgAAMpp7vMAAAABABAFi/23ABI9cQAP
-				B6wAAJMsAAIAOU1hY2ludG9zaCBIRDpVc2VyczoAYmls
-				bGtlbGxlcjoAU2l0ZXM6AHR1bWJscjoAdGhlbWUuaHRt
-				bAAADgAWAAoAdABoAGUAbQBlAC4AaAB0AG0AbAAPABoA
-				DABNAGEAYwBpAG4AdABvAHMAaAAgAEgARAASACh1c2Vy
-				cy9iaWxsa2VsbGVyL1NpdGVzL3R1bWJsci90aGVtZS5o
-				dG1sABMAAS8AABUAAgAR//8AAA==
+				AMkfISoAAAARAAgAAMsEFeMAAAABABQIvLUcBVbGiAVW
+				xj0ADwesAACTLAACAENNYWNpbnRvc2ggSEQ6VXNlcnM6
+				AGJpbGxrZWxsZXI6AERyb3Bib3g6AFB1YmxpYzoAdHVt
+				YmxyOgB0aGVtZS5odG1sAAAOABYACgB0AGgAZQBtAGUA
+				LgBoAHQAbQBsAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBo
+				ACAASABEABIAMVVzZXJzL2JpbGxrZWxsZXIvRHJvcGJv
+				eC9QdWJsaWMvdHVtYmxyL3RoZW1lLmh0bWwAABMAAS8A
+				ABUAAgAR//8AAA==
 				</data>
 				<key>FileURL</key>
-				<string>file://localhost/users/billkeller/Sites/tumblr/theme.html</string>
+				<string>file://localhost/Users/billkeller/Dropbox/Public/tumblr/theme.html</string>
 				<key>RelativePath</key>
 				<string>./theme.html</string>
 				<key>TypeID</key>
@@ -43,42 +44,38 @@
 			<key>ItemType</key>
 			<string>FileReference</string>
 		</dict>
-		<key>6F0AA598-A7F5-4820-8AD6-F89DA8B2C088</key>
+		<key>D0A30488-C3DF-437C-A632-CFBC1ABA930D</key>
 		<dict>
 			<key>ItemData</key>
 			<dict>
 				<key>AliasData</key>
 				<data>
-				AAAAAAG2AAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
-				AAAAAADJHtraSCsAAAWL/bcYc2FtcGxlLWluc3BpcmUt
-				d2VsbC5odG1sAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAABYwBPMppu/BURVhUUipjaP//
+				AAAAAAF2AAIAAQxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
+				AAAAAADJHtraSCsAAAi8tRwCanMAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAACLy1psqdF0AAAAAAAAAAAP//
 				//8AAAkgAAAAAAAAAAAAAAAAAAAABnR1bWJscgAQAAgA
-				AMkfISoAAAARAAgAAMpp9DAAAAABABAFi/23ABI9cQAP
-				B6wAAJMsAAIAR01hY2ludG9zaCBIRDpVc2VyczoAYmls
-				bGtlbGxlcjoAU2l0ZXM6AHR1bWJscjoAc2FtcGxlLWlu
-				c3BpcmUtd2VsbC5odG1sAAAOADIAGABzAGEAbQBwAGwA
-				ZQAtAGkAbgBzAHAAaQByAGUALQB3AGUAbABsAC4AaAB0
-				AG0AbAAPABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgA
-				RAASADZ1c2Vycy9iaWxsa2VsbGVyL1NpdGVzL3R1bWJs
-				ci9zYW1wbGUtaW5zcGlyZS13ZWxsLmh0bWwAEwABLwAA
-				FQACABH//wAA
+				AMkfISoAAAARAAgAAMqdT4AAAAABABQIvLUcBVbGiAVW
+				xj0ADwesAACTLAACADtNYWNpbnRvc2ggSEQ6VXNlcnM6
+				AGJpbGxrZWxsZXI6AERyb3Bib3g6AFB1YmxpYzoAdHVt
+				YmxyOgBqcwAADgAGAAIAagBzAA8AGgAMAE0AYQBjAGkA
+				bgB0AG8AcwBoACAASABEABIAKVVzZXJzL2JpbGxrZWxs
+				ZXIvRHJvcGJveC9QdWJsaWMvdHVtYmxyL2pzAAATAAEv
+				AAAVAAIAEf//AAA=
 				</data>
 				<key>FileURL</key>
-				<string>file://localhost/users/billkeller/Sites/tumblr/sample-inspire-well.html</string>
+				<string>file://localhost/Users/billkeller/Dropbox/Public/tumblr/js/</string>
 				<key>RelativePath</key>
-				<string>./sample-inspire-well.html</string>
+				<string>./js</string>
 				<key>TypeID</key>
 				<string>_CFileLocator</string>
 				<key>Version</key>
 				<integer>1</integer>
 			</dict>
 			<key>ItemName</key>
-			<string>sample-inspire-well.html</string>
+			<string>js</string>
 			<key>ItemType</key>
-			<string>FileReference</string>
-			<key>UserOverrideItemName</key>
-			<true/>
+			<string>FolderReference</string>
 		</dict>
 		<key>E0303E41-7F9E-4963-B584-3F8FDFF101DF</key>
 		<dict>
@@ -86,20 +83,21 @@
 			<dict>
 				<key>AliasData</key>
 				<data>
-				AAAAAAFiAAIAAQxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
-				AAAAAADJHtraSCsAAAWL/bcDY3NzAAAAAAAAAAAAAAAA
+				AAAAAAF4AAIAAQxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
+				AAAAAADJHtraSCsAAAi8tRwDY3NzAAAAAAAAAAAAAAAA
 				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAABYwIicppvuUAAAAAAAAAAP//
+				AAAAAAAAAAAAAAAAAAAACLy1eMsEvO4AAAAAAAAAAP//
 				//8AAAkgAAAAAAAAAAAAAAAAAAAABnR1bWJscgAQAAgA
-				AMkfISoAAAARAAgAAMpp9yUAAAABABAFi/23ABI9cQAP
-				B6wAAJMsAAIAMk1hY2ludG9zaCBIRDpVc2VyczoAYmls
-				bGtlbGxlcjoAU2l0ZXM6AHR1bWJscjoAY3NzAA4ACAAD
-				AGMAcwBzAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBoACAA
-				SABEABIAIXVzZXJzL2JpbGxrZWxsZXIvU2l0ZXMvdHVt
-				YmxyL2NzcwAAEwABLwAAFQACABH//wAA
+				AMkfISoAAAARAAgAAMsFAz4AAAABABQIvLUcBVbGiAVW
+				xj0ADwesAACTLAACADxNYWNpbnRvc2ggSEQ6VXNlcnM6
+				AGJpbGxrZWxsZXI6AERyb3Bib3g6AFB1YmxpYzoAdHVt
+				YmxyOgBjc3MADgAIAAMAYwBzAHMADwAaAAwATQBhAGMA
+				aQBuAHQAbwBzAGgAIABIAEQAEgAqVXNlcnMvYmlsbGtl
+				bGxlci9Ecm9wYm94L1B1YmxpYy90dW1ibHIvY3NzABMA
+				AS8AABUAAgAR//8AAA==
 				</data>
 				<key>FileURL</key>
-				<string>file://localhost/users/billkeller/Sites/tumblr/css/</string>
+				<string>file://localhost/Users/billkeller/Dropbox/Public/tumblr/css/</string>
 				<key>RelativePath</key>
 				<string>./css</string>
 				<key>TypeID</key>
