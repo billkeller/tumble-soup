@@ -161,13 +161,17 @@
 
 			{block:Link}
 			<article class="link">
-				<header>
-					<p><a href="{Permalink}">{block:Date}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth}{DayOfMonthWithZero}<br />{Year}</time>{/block:Date}</a></p>
-				    <h2><a href="{URL}" {Target}>{Name} &rarr;</a></h2>
-				</header>
+				<h2><a href="{URL}" {Target}>{Name}</a></h2>
 				{block:Description}
 					{Description}
 				{/block:Description}
+				<footer><p class="ui-date">
+					<a href="{Permalink}">
+						{block:Date}
+							<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth} {DayOfMonthWithZero}, {Year}</time>
+						{/block:Date}
+					</a>
+				</p></footer>
 			{/block:Link}
 			
 			{block:Answer}
@@ -306,7 +310,7 @@
 		</section>
 		{block:Pagination}
 		<nav id="paging">
-			<p>Page {CurrentPage} of {TotalPages}</p>
+			<p>Page {CurrentPage} of {TotalPages} <span><a href="https://github.com/billkeller/tumble-soup">Tumble-Soup</a> is a custom <a href="http://tumblr.com">Tumblr</a> theme, still in the works.</span></p>
 
 			{block:NextPage}
 			<a href="{NextPage}">&larr; Older</a>

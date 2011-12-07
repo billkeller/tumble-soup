@@ -5,7 +5,7 @@
 	<key>EmbeddedEditorHidden:billkeller</key>
 	<false/>
 	<key>ExpandedEditorWidth:billkeller:displays([(0, 0), (2560, 1440)]:[(-1920, 90), (1920, 1200)])</key>
-	<integer>991</integer>
+	<integer>946</integer>
 	<key>ExpandedItems:billkeller</key>
 	<array>
 		<string>E0303E41-7F9E-4963-B584-3F8FDFF101DF</string>
@@ -14,115 +14,7 @@
 	<key>FileFilterID:billkeller</key>
 	<string>msng</string>
 	<key>OpenDocuments:billkeller</key>
-	<array>
-		<dict>
-			<key>AliasData</key>
-			<data>
-			AAAAAAGYAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			HtraSCsAAAi8tXgIc2l0ZS5jc3MAAAAAAAAAAAAAAAAAAAAAAAAA
-			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACLy1
-			m8sDzPRURVhUUipjaP////8AAAkgAAAAAAAAAAAAAAAAAAAAA2Nz
-			cwAAEAAIAADJHyEqAAAAEQAIAADLBBNEAAAAAQAYCLy1eAi8tRwF
-			VsaIBVbGPQAPB6wAAJMsAAIARk1hY2ludG9zaCBIRDpVc2VyczoA
-			YmlsbGtlbGxlcjoARHJvcGJveDoAUHVibGljOgB0dW1ibHI6AGNz
-			czoAc2l0ZS5jc3MADgASAAgAcwBpAHQAZQAuAGMAcwBzAA8AGgAM
-			AE0AYQBjAGkAbgB0AG8AcwBoACAASABEABIAM1VzZXJzL2JpbGxr
-			ZWxsZXIvRHJvcGJveC9QdWJsaWMvdHVtYmxyL2Nzcy9zaXRlLmNz
-			cwAAEwABLwAAFQACABH//wAA
-			</data>
-			<key>FileURL</key>
-			<string>file://localhost/Users/billkeller/Dropbox/Public/tumblr/css/site.css</string>
-			<key>RelativePath</key>
-			<string>./css/site.css</string>
-			<key>TypeID</key>
-			<string>_CFileLocator</string>
-			<key>Version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>AliasData</key>
-			<data>
-			AAAAAAIiAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			HtraSCsAAAi3iu0fc2l0ZSAoZGVsZXRlZCA0ZWRlNiM3MzUxNjBC
-			LmNzcwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABzUW
-			C8ql3X5URVhUUipjaP////8AAAkgAAAAAAAAAAAAAAAAAAAACjIw
-			MTEtMTItMDYAEAAIAADJHyEqAAAAEQAIAADKphW+AAAAAQAUCLeK
-			7QVWxm8FVsY9AA8HrAAAkywAAgBkTWFjaW50b3NoIEhEOlVzZXJz
-			OgBiaWxsa2VsbGVyOgBEcm9wYm94OgAuZHJvcGJveC5jYWNoZToA
-			MjAxMS0xMi0wNjoAc2l0ZSAoZGVsZXRlZCA0ZWRlNiM3MzUxNjBC
-			LmNzcwAOAFQAKQBzAGkAdABlACAAKABkAGUAbABlAHQAZQBkACAA
-			NABlAGQAZQA2ADIAYwA0AC0AMQAyAGQAYwAtADQAMwA4AGYANABh
-			ADQAOAApAC4AYwBzAHMADwAaAAwATQBhAGMAaQBuAHQAbwBzAGgA
-			IABIAEQAEgBcVXNlcnMvYmlsbGtlbGxlci9Ecm9wYm94Ly5kcm9w
-			Ym94LmNhY2hlLzIwMTEtMTItMDYvc2l0ZSAoZGVsZXRlZCA0ZWRl
-			NjJjNC0xMmRjLTQzOGY0YTQ4KS5jc3MAEwABLwAAFQACABH//wAA
-			</data>
-			<key>FileURL</key>
-			<string>file://localhost/Users/billkeller/Dropbox/.dropbox.cache/2011-12-06/site%20(deleted%204ede62c4-12dc-438f4a48).css</string>
-			<key>RelativePath</key>
-			<string>../../.dropbox.cache/2011-12-06/site (deleted 4ede62c4-12dc-438f4a48).css</string>
-			<key>TypeID</key>
-			<string>_CFileLocator</string>
-			<key>Version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>AliasData</key>
-			<data>
-			AAAAAAImAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			HtraSCsAAAi3iu0fcmVzZXQgKGRlbGV0ZWQgNGU0NCM1OEMwODhG
-			LmNzcwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYwI
-			j8ppvvNURVhUUipjaP////8AAAkgAAAAAAAAAAAAAAAAAAAACjIw
-			MTEtMTItMDYAEAAIAADJHyEqAAAAEQAIAADKafczAAAAAQAUCLeK
-			7QVWxm8FVsY9AA8HrAAAkywAAgBkTWFjaW50b3NoIEhEOlVzZXJz
-			OgBiaWxsa2VsbGVyOgBEcm9wYm94OgAuZHJvcGJveC5jYWNoZToA
-			MjAxMS0xMi0wNjoAcmVzZXQgKGRlbGV0ZWQgNGU0NCM1OEMwODhG
-			LmNzcwAOAFYAKgByAGUAcwBlAHQAIAAoAGQAZQBsAGUAdABlAGQA
-			IAA0AGUANAA0ADQANgBiADMALQAxADUAMwA0AC0AZAA3ADUAYwA2
-			ADMANgA4ACkALgBjAHMAcwAPABoADABNAGEAYwBpAG4AdABvAHMA
-			aAAgAEgARAASAF1Vc2Vycy9iaWxsa2VsbGVyL0Ryb3Bib3gvLmRy
-			b3Bib3guY2FjaGUvMjAxMS0xMi0wNi9yZXNldCAoZGVsZXRlZCA0
-			ZTQ0NDZiMy0xNTM0LWQ3NWM2MzY4KS5jc3MAABMAAS8AABUAAgAR
-			//8AAA==
-			</data>
-			<key>FileURL</key>
-			<string>file://localhost/Users/billkeller/Dropbox/.dropbox.cache/2011-12-06/reset%20(deleted%204e4446b3-1534-d75c6368).css</string>
-			<key>RelativePath</key>
-			<string>../../.dropbox.cache/2011-12-06/reset (deleted 4e4446b3-1534-d75c6368).css</string>
-			<key>TypeID</key>
-			<string>_CFileLocator</string>
-			<key>Version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>AliasData</key>
-			<data>
-			AAAAAAIsAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
-			HtraSCsAAAi3iu0fdWktaWNvbnMgKGRlbGV0ZWQgNCM3MzUwREI0
-			LmNzcwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABzUN
-			tMql1tJURVhUAAAAAP////8AAAkgAAAAAAAAAAAAAAAAAAAACjIw
-			MTEtMTItMDYAEAAIAADJHyEqAAAAEQAIAADKpg8SAAAAAQAUCLeK
-			7QVWxm8FVsY9AA8HrAAAkywAAgBkTWFjaW50b3NoIEhEOlVzZXJz
-			OgBiaWxsa2VsbGVyOgBEcm9wYm94OgAuZHJvcGJveC5jYWNoZToA
-			MjAxMS0xMi0wNjoAdWktaWNvbnMgKGRlbGV0ZWQgNCM3MzUwREI0
-			LmNzcwAOAFoALAB1AGkALQBpAGMAbwBuAHMAIAAoAGQAZQBsAGUA
-			dABlAGQAIAA0AGUAZABlADQAMQBjAGMALQA2ADYAZgAtADkAMwBh
-			AGMAYQA4AGMAYQApAC4AYwBzAHMADwAaAAwATQBhAGMAaQBuAHQA
-			bwBzAGgAIABIAEQAEgBfVXNlcnMvYmlsbGtlbGxlci9Ecm9wYm94
-			Ly5kcm9wYm94LmNhY2hlLzIwMTEtMTItMDYvdWktaWNvbnMgKGRl
-			bGV0ZWQgNGVkZTQxY2MtNjZmLTkzYWNhOGNhKS5jc3MAABMAAS8A
-			ABUAAgAR//8AAA==
-			</data>
-			<key>FileURL</key>
-			<string>file://localhost/Users/billkeller/Dropbox/.dropbox.cache/2011-12-06/ui-icons%20(deleted%204ede41cc-66f-93aca8ca).css</string>
-			<key>RelativePath</key>
-			<string>../../.dropbox.cache/2011-12-06/ui-icons (deleted 4ede41cc-66f-93aca8ca).css</string>
-			<key>TypeID</key>
-			<string>_CFileLocator</string>
-			<key>Version</key>
-			<integer>1</integer>
-		</dict>
-	</array>
+	<array/>
 	<key>OpenDocumentsExpanded</key>
 	<true/>
 	<key>OpenDocumentsVisible</key>
@@ -131,6 +23,64 @@
 	<true/>
 	<key>RecentItems:billkeller</key>
 	<array>
+		<dict>
+			<key>Date</key>
+			<date>2011-12-07T12:27:42Z</date>
+			<key>Location</key>
+			<dict>
+				<key>AliasData</key>
+				<data>
+				AAAAAAGoAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
+				AAAAAADJHtraSCsAAAi8tXgMdWktaWNvbnMuY3NzAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAACLy1mMsDq/xURVhUAAAAAP//
+				//8AAAkgAAAAAAAAAAAAAAAAAAAAA2NzcwAAEAAIAADJ
+				HyEqAAAAEQAIAADLA/JMAAAAAQAYCLy1eAi8tRwFVsaI
+				BVbGPQAPB6wAAJMsAAIASk1hY2ludG9zaCBIRDpVc2Vy
+				czoAYmlsbGtlbGxlcjoARHJvcGJveDoAUHVibGljOgB0
+				dW1ibHI6AGNzczoAdWktaWNvbnMuY3NzAA4AGgAMAHUA
+				aQAtAGkAYwBvAG4AcwAuAGMAcwBzAA8AGgAMAE0AYQBj
+				AGkAbgB0AG8AcwBoACAASABEABIAN1VzZXJzL2JpbGxr
+				ZWxsZXIvRHJvcGJveC9QdWJsaWMvdHVtYmxyL2Nzcy91
+				aS1pY29ucy5jc3MAABMAAS8AABUAAgAR//8AAA==
+				</data>
+				<key>FileURL</key>
+				<string>file://localhost/Users/billkeller/Dropbox/Public/tumblr/css/ui-icons.css</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Date</key>
+			<date>2011-12-07T12:10:55Z</date>
+			<key>Location</key>
+			<dict>
+				<key>AliasData</key>
+				<data>
+				AAAAAAGWAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
+				AAAAAADJHtraSCsAAAi8tRwKdGhlbWUuaHRtbAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAACLy1rssDz5NURVhUUipjaP//
+				//8AAAkgAAAAAAAAAAAAAAAAAAAABnR1bWJscgAQAAgA
+				AMkfISoAAAARAAgAAMsEFeMAAAABABQIvLUcBVbGiAVW
+				xj0ADwesAACTLAACAENNYWNpbnRvc2ggSEQ6VXNlcnM6
+				AGJpbGxrZWxsZXI6AERyb3Bib3g6AFB1YmxpYzoAdHVt
+				YmxyOgB0aGVtZS5odG1sAAAOABYACgB0AGgAZQBtAGUA
+				LgBoAHQAbQBsAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBo
+				ACAASABEABIAMVVzZXJzL2JpbGxrZWxsZXIvRHJvcGJv
+				eC9QdWJsaWMvdHVtYmxyL3RoZW1lLmh0bWwAABMAAS8A
+				ABUAAgAR//8AAA==
+				</data>
+				<key>FileURL</key>
+				<string>file://localhost/Users/billkeller/Dropbox/Public/tumblr/theme.html</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
 		<dict>
 			<key>Date</key>
 			<date>2011-12-07T11:51:26Z</date>
@@ -277,8 +227,8 @@
 	<key>ToolbarVisible:billkeller</key>
 	<true/>
 	<key>ViewSplitterPosition:billkeller</key>
-	<real>0.22578124701976776</real>
+	<real>0.23400810360908508</real>
 	<key>WindowFrame:billkeller:displays([(0, 0), (2560, 1440)]:[(-1920, 90), (1920, 1200)])</key>
-	<string>rect(44,1,1379,1281)</string>
+	<string>rect(44,0,1181,1235)</string>
 </dict>
 </plist>

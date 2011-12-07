@@ -58,5 +58,30 @@ ul.ui-icons {
 			content: 'a ';
 			color: #939598;
 			}
+
+		/*--------------------------------------------------
+		EXTERNAL LINKS (link posts)
+			this does not use our usual, ui-icons setup,
+			so we need to set font and font-size
+		---------------------------------------------------*/
+		article.link h2:after {
+			font-family:'HeydingsCommonIcons';
+			font-size: 14px;
+			content: ' e';
+			color: #939598;
+			}
+		/*--------------------------------------------------
+		DATE PERMALINKS (found on link posts)
+			this does not use our usual, ui-icons setup,
+			so we need to set font and font-size
+		---------------------------------------------------*/
+		p.ui-date:before {
+			font-family:'HeydingsCommonIcons';
+			font-size: 14px;
+			content: 'c ';
+			color: #939598;
+			position: relative;
+			top: 1px;
+			}
 		
 		

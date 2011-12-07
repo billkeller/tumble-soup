@@ -32,6 +32,10 @@ General structure
 	aside#secondary,
 	section#primary {width: 200px;}
 	section#primary {width: auto;}
+
+/*--------------------------------------------------
+All post types
+---------------------------------------------------*/
 article {
 	border: 1px solid #ccc;
 	float: left;
@@ -46,9 +50,27 @@ article {
 	z-index: 1;
 	background-color: #fff;
 	}
-	/* our photoset widths need to be made a touch smaller, so they fit Tumblrs options */
+	
+	/*--------------------------------------------------
+	Photosets
+	---------------------------------------------------*/
 	article.photoset {width: 250px;}
 	div.html_photoset + p {display: none;}
+	
+	/*--------------------------------------------------
+	Links
+	---------------------------------------------------*/
+	article.link {}
+	article.link p {
+		color: #666;
+		font: normal 1em/20px 'Helvetica Neue', Helvetica, Arial,sans-serif;
+		margin: 9px 0;
+		}
+	article.link h2 {
+		font-weight: normal;
+		font-size: 1em;
+		}
+	
 	/*--------------------------------------------------
 	used on individual posts
 	---------------------------------------------------*/
@@ -57,11 +79,17 @@ article {
 		max-width: none;
 		width: auto;
 		}
+		
 article:hover {z-index: 2;}
 nav#paging,
 .notes {
 	font: normal .9em Helvetica, Arial,sans-serif;
 	color: #939598;
+	}
+nav#paging span {
+	float: right;
+	font-size: .8em;
+	margin-right: 39px;
 	}
 .notes li {margin-bottom: 9px;}
 .notes li img {vertical-align: -3px;}
@@ -222,6 +250,7 @@ dates, date links
 	text-decoration: none;
 	text-shadow: #fff 2px 2px 1px;
 	}
+
 /*--------------
 photos
 ---------------*/
