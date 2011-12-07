@@ -195,13 +195,17 @@
 			
 			{block:Chat}
 			<article class="chat">
-				<header>
-					<p><a href="{Permalink}">{block:Date}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth}{DayOfMonthWithZero}<br />{Year}</time>{/block:Date}</a></p>
-					{block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
-				</header>
 				{block:Lines}
 				<p class="chat-line {Alt}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</p>
 				{/block:Lines}
+
+				<footer><p class="ui-date">
+					<a href="{Permalink}">
+						{block:Date}
+							<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth} {DayOfMonthWithZero}, {Year}</time>
+						{/block:Date}
+					</a>
+				</p></footer>
 			{/block:Chat}
 
 			{block:Video}

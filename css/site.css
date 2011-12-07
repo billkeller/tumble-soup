@@ -26,12 +26,14 @@ General structure
 	width: 978px;
 	width: 880px;
 	margin: 0 auto;
-	overflow: auto;
+	overflow: visible;
 	padding: 0 10px 0 36px; /* right margin of each article + the right padding here = 36px */
 	}
-	aside#secondary,
-	section#primary {width: 200px;}
-	section#primary {width: auto;}
+	aside#secondary {width: 200px;}
+	section#primary {
+		width: auto;
+		overflow: visible;
+		}
 
 /*--------------------------------------------------
 All post types
@@ -50,6 +52,10 @@ article {
 	z-index: 1;
 	background-color: #fff;
 	}
+	article:hover {
+		z-index: 2;
+		
+		}	
 	
 	/*--------------------------------------------------
 	Photosets
@@ -70,7 +76,12 @@ article {
 		font-weight: normal;
 		font-size: 1em;
 		}
-	
+
+	/*--------------------------------------------------
+	Chats
+	---------------------------------------------------*/
+	p.chat-line {padding: 4px;}
+	p.chat-line.odd {background-color: #ddd;}
 	/*--------------------------------------------------
 	used on individual posts
 	---------------------------------------------------*/
@@ -79,8 +90,6 @@ article {
 		max-width: none;
 		width: auto;
 		}
-		
-article:hover {z-index: 2;}
 nav#paging,
 .notes {
 	font: normal .9em Helvetica, Arial,sans-serif;
@@ -107,11 +116,18 @@ article.notes {border-style: none;}
 nav#paging p,
 .notes {margin-bottom: 9px;}
 
+div.active { }
+/*-----------------------------------------------------
+hidden footer across the bottom of each post (article)
+------------------------------------------------------*/
 /* info bits across the bottom of each post */
 article > footer {
-	display: none;
+	/* display: none; */
+	-webkit-transition: opacity .5s ease-out;
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
 	font: normal .8em Helvetica, Arial,sans-serif;
-	color: #939598;
 	color: #666;
 	}
 	article > footer > *:first-child {margin-top: 9px;}
@@ -126,6 +142,8 @@ article:hover > footer,
 .permalinkpage article > footer,
 article:hover > section.notes {
 	display: block;
+	opacity: 1;
+	height: auto; 
 	}
 /*--------------------------------------------------
 QUOTES
@@ -230,7 +248,10 @@ dates, date links
  top left of each article
 --------------------------------------------*/
 #primary header {
-	display: none;
+	display: block;
+	-webkit-transition: opacity .5s ease-out;
+	opacity: 0;
+	height: 0;
 	position: absolute;
 	top: 6px;
 	left: 6px;
@@ -242,7 +263,10 @@ dates, date links
 	border-right: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 	}
-	#primary article:hover header {display: inline;}
+	#primary article:hover header {
+		opacity: 1;
+		height: auto;
+		}
 #primary header a,
 #primary header a:link,
 #primary header a:visited {
