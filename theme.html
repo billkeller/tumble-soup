@@ -249,21 +249,19 @@
 
 			{block:Audio}
 			<article class="audio">
-				<header>
-					<p><a href="{Permalink}">{block:Date}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth}{DayOfMonthWithZero}<br />{Year}</time>{/block:Date}</a></p>
-				</header>
-
 				{block:AlbumArt}
-				<img src="{AlbumArtURL}" alt="{block:Artist}{Artist}{/block:Artist}{block:TrackName} - {TrackName}{/block:TrackName}" />
+					<img src="{AlbumArtURL}" alt="{block:Artist}{Artist}{/block:Artist}{block:TrackName} - {TrackName}{/block:TrackName}" />
 				{/block:AlbumArt}
-                    
+				
 				<div class="player">{AudioPlayerGrey}</div>
 				
-				<p>{PlayCountWithLabel}</p>
-				{block:ExternalAudio}
-				<p><a href="{ExternalAudioURL}">Download</a></p>
-				{/block:ExternalAudio}
-				{block:Caption}{Caption}{/block:Caption}
+				<footer><p class="ui-date">
+					<a href="{Permalink}">
+						{block:Date}
+							<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth} {DayOfMonthWithZero}, {Year}</time>
+						{/block:Date}
+					</a>
+				</p></footer>
 			{/block:Audio}
 
 				<!-- display this footer only when and if there are tags, notes or reblogs -->
@@ -272,6 +270,15 @@
 						{Caption}
 					{/block:Caption}
 
+					{block:Audio}
+						<p>
+							{PlayCountWithLabel}
+							{block:ExternalAudio}
+								<a href="{ExternalAudioURL}">Download</a>
+							{/block:ExternalAudio}
+						</p>
+					{/block:Audio}
+					
 					{block:HasTags}
 					<ul class="ui-icons">
 					{block:Tags}<li class="ui-tag"><a href="{TagURL}">{Tag}</a></li>{/block:Tags}</ul>
