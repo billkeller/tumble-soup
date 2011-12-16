@@ -5,7 +5,7 @@
 	<key>EmbeddedEditorHidden:billkeller</key>
 	<false/>
 	<key>ExpandedEditorWidth:billkeller:displays([(0, 0), (2560, 1440)]:[(-1920, 90), (1920, 1200)])</key>
-	<integer>984</integer>
+	<integer>1267</integer>
 	<key>ExpandedItems:billkeller</key>
 	<array>
 		<string>E0303E41-7F9E-4963-B584-3F8FDFF101DF</string>
@@ -14,7 +14,56 @@
 	<key>FileFilterID:billkeller</key>
 	<string>msng</string>
 	<key>OpenDocuments:billkeller</key>
-	<array/>
+	<array>
+		<dict>
+			<key>AliasData</key>
+			<data>
+			AAAAAAGYAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
+			HtraSCsAAAi8tXgIc2l0ZS5jc3MAAAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACLy1
+			m8sDzPRURVhUUipjaP////8AAAkgAAAAAAAAAAAAAAAAAAAAA2Nz
+			cwAAEAAIAADJHyEqAAAAEQAIAADLBBNEAAAAAQAYCLy1eAi8tRwF
+			VsaIBVbGPQAPB6wAAJMsAAIARk1hY2ludG9zaCBIRDpVc2VyczoA
+			YmlsbGtlbGxlcjoARHJvcGJveDoAUHVibGljOgB0dW1ibHI6AGNz
+			czoAc2l0ZS5jc3MADgASAAgAcwBpAHQAZQAuAGMAcwBzAA8AGgAM
+			AE0AYQBjAGkAbgB0AG8AcwBoACAASABEABIAM1VzZXJzL2JpbGxr
+			ZWxsZXIvRHJvcGJveC9QdWJsaWMvdHVtYmxyL2Nzcy9zaXRlLmNz
+			cwAAEwABLwAAFQACABH//wAA
+			</data>
+			<key>FileURL</key>
+			<string>file://localhost/Users/billkeller/Dropbox/Public/tumblr/css/site.css</string>
+			<key>RelativePath</key>
+			<string>./css/site.css</string>
+			<key>TypeID</key>
+			<string>_CFileLocator</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>AliasData</key>
+			<data>
+			AAAAAAGWAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADJ
+			HtraSCsAAAi8tRwKdGhlbWUuaHRtbAAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACLy1
+			rssDz5NURVhUUipjaP////8AAAkgAAAAAAAAAAAAAAAAAAAABnR1
+			bWJscgAQAAgAAMkfISoAAAARAAgAAMsEFeMAAAABABQIvLUcBVbG
+			iAVWxj0ADwesAACTLAACAENNYWNpbnRvc2ggSEQ6VXNlcnM6AGJp
+			bGxrZWxsZXI6AERyb3Bib3g6AFB1YmxpYzoAdHVtYmxyOgB0aGVt
+			ZS5odG1sAAAOABYACgB0AGgAZQBtAGUALgBoAHQAbQBsAA8AGgAM
+			AE0AYQBjAGkAbgB0AG8AcwBoACAASABEABIAMVVzZXJzL2JpbGxr
+			ZWxsZXIvRHJvcGJveC9QdWJsaWMvdHVtYmxyL3RoZW1lLmh0bWwA
+			ABMAAS8AABUAAgAR//8AAA==
+			</data>
+			<key>FileURL</key>
+			<string>file://localhost/Users/billkeller/Dropbox/Public/tumblr/theme.html</string>
+			<key>RelativePath</key>
+			<string>./theme.html</string>
+			<key>TypeID</key>
+			<string>_CFileLocator</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
 	<key>OpenDocumentsExpanded</key>
 	<true/>
 	<key>OpenDocumentsVisible</key>
@@ -25,65 +74,7 @@
 	<array>
 		<dict>
 			<key>Date</key>
-			<date>2011-12-16T11:55:28Z</date>
-			<key>Location</key>
-			<dict>
-				<key>AliasData</key>
-				<data>
-				AAAAAAGWAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
-				AAAAAADJHtraSCsAAAi8tRwKdGhlbWUuaHRtbAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAACLy1rssDz5NURVhUUipjaP//
-				//8AAAkgAAAAAAAAAAAAAAAAAAAABnR1bWJscgAQAAgA
-				AMkfISoAAAARAAgAAMsEFeMAAAABABQIvLUcBVbGiAVW
-				xj0ADwesAACTLAACAENNYWNpbnRvc2ggSEQ6VXNlcnM6
-				AGJpbGxrZWxsZXI6AERyb3Bib3g6AFB1YmxpYzoAdHVt
-				YmxyOgB0aGVtZS5odG1sAAAOABYACgB0AGgAZQBtAGUA
-				LgBoAHQAbQBsAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBo
-				ACAASABEABIAMVVzZXJzL2JpbGxrZWxsZXIvRHJvcGJv
-				eC9QdWJsaWMvdHVtYmxyL3RoZW1lLmh0bWwAABMAAS8A
-				ABUAAgAR//8AAA==
-				</data>
-				<key>FileURL</key>
-				<string>file://localhost/Users/billkeller/Dropbox/Public/tumblr/theme.html</string>
-				<key>TypeID</key>
-				<string>_CFileLocator</string>
-				<key>Version</key>
-				<integer>1</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>Date</key>
-			<date>2011-12-16T11:49:33Z</date>
-			<key>Location</key>
-			<dict>
-				<key>AliasData</key>
-				<data>
-				AAAAAAGYAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
-				AAAAAADJHtraSCsAAAi8tXgIc2l0ZS5jc3MAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAACLy1m8sDzPRURVhUUipjaP//
-				//8AAAkgAAAAAAAAAAAAAAAAAAAAA2NzcwAAEAAIAADJ
-				HyEqAAAAEQAIAADLBBNEAAAAAQAYCLy1eAi8tRwFVsaI
-				BVbGPQAPB6wAAJMsAAIARk1hY2ludG9zaCBIRDpVc2Vy
-				czoAYmlsbGtlbGxlcjoARHJvcGJveDoAUHVibGljOgB0
-				dW1ibHI6AGNzczoAc2l0ZS5jc3MADgASAAgAcwBpAHQA
-				ZQAuAGMAcwBzAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBo
-				ACAASABEABIAM1VzZXJzL2JpbGxrZWxsZXIvRHJvcGJv
-				eC9QdWJsaWMvdHVtYmxyL2Nzcy9zaXRlLmNzcwAAEwAB
-				LwAAFQACABH//wAA
-				</data>
-				<key>FileURL</key>
-				<string>file://localhost/Users/billkeller/Dropbox/Public/tumblr/css/site.css</string>
-				<key>TypeID</key>
-				<string>_CFileLocator</string>
-				<key>Version</key>
-				<integer>1</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>Date</key>
-			<date>2011-12-16T11:49:13Z</date>
+			<date>2011-12-16T21:56:39Z</date>
 			<key>Location</key>
 			<dict>
 				<key>AliasData</key>
@@ -112,7 +103,65 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2011-12-16T11:49:13Z</date>
+			<date>2011-12-16T21:19:48Z</date>
+			<key>Location</key>
+			<dict>
+				<key>AliasData</key>
+				<data>
+				AAAAAAGYAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
+				AAAAAADJHtraSCsAAAi8tXgIc2l0ZS5jc3MAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAACLy1m8sDzPRURVhUUipjaP//
+				//8AAAkgAAAAAAAAAAAAAAAAAAAAA2NzcwAAEAAIAADJ
+				HyEqAAAAEQAIAADLBBNEAAAAAQAYCLy1eAi8tRwFVsaI
+				BVbGPQAPB6wAAJMsAAIARk1hY2ludG9zaCBIRDpVc2Vy
+				czoAYmlsbGtlbGxlcjoARHJvcGJveDoAUHVibGljOgB0
+				dW1ibHI6AGNzczoAc2l0ZS5jc3MADgASAAgAcwBpAHQA
+				ZQAuAGMAcwBzAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBo
+				ACAASABEABIAM1VzZXJzL2JpbGxrZWxsZXIvRHJvcGJv
+				eC9QdWJsaWMvdHVtYmxyL2Nzcy9zaXRlLmNzcwAAEwAB
+				LwAAFQACABH//wAA
+				</data>
+				<key>FileURL</key>
+				<string>file://localhost/Users/billkeller/Dropbox/Public/tumblr/css/site.css</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Date</key>
+			<date>2011-12-16T21:17:36Z</date>
+			<key>Location</key>
+			<dict>
+				<key>AliasData</key>
+				<data>
+				AAAAAAGWAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAA
+				AAAAAADJHtraSCsAAAi8tRwKdGhlbWUuaHRtbAAAAAAA
+				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+				AAAAAAAAAAAAAAAAAAAACLy1rssDz5NURVhUUipjaP//
+				//8AAAkgAAAAAAAAAAAAAAAAAAAABnR1bWJscgAQAAgA
+				AMkfISoAAAARAAgAAMsEFeMAAAABABQIvLUcBVbGiAVW
+				xj0ADwesAACTLAACAENNYWNpbnRvc2ggSEQ6VXNlcnM6
+				AGJpbGxrZWxsZXI6AERyb3Bib3g6AFB1YmxpYzoAdHVt
+				YmxyOgB0aGVtZS5odG1sAAAOABYACgB0AGgAZQBtAGUA
+				LgBoAHQAbQBsAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBo
+				ACAASABEABIAMVVzZXJzL2JpbGxrZWxsZXIvRHJvcGJv
+				eC9QdWJsaWMvdHVtYmxyL3RoZW1lLmh0bWwAABMAAS8A
+				ABUAAgAR//8AAA==
+				</data>
+				<key>FileURL</key>
+				<string>file://localhost/Users/billkeller/Dropbox/Public/tumblr/theme.html</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Date</key>
+			<date>2011-12-16T21:17:28Z</date>
 			<key>Location</key>
 			<dict>
 				<key>AliasData</key>
@@ -157,8 +206,8 @@
 	<key>ToolbarVisible:billkeller</key>
 	<true/>
 	<key>ViewSplitterPosition:billkeller</key>
-	<real>0.22702278196811676</real>
+	<real>0.1857326477766037</real>
 	<key>WindowFrame:billkeller:displays([(0, 0), (2560, 1440)]:[(-1920, 90), (1920, 1200)])</key>
-	<string>rect(44,0,1354,1273)</string>
+	<string>rect(44,0,1374,1556)</string>
 </dict>
 </plist>

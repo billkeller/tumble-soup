@@ -112,8 +112,6 @@ article.notes {border-style: none;}
 		font-size: 1.1em;
 		margin-bottom: 9px;
 		}
-
-nav#paging p,
 .notes {margin-bottom: 9px;}
 
 div.active { }
@@ -134,7 +132,18 @@ article > footer {
 	article > footer > *:last-child {margin-bottom: 9px;}
 	article > footer p,
 	article > footer blockquote {margin-bottom: 9px;}
-
+	article > footer p.author {}
+	article > footer p.author img {
+		border: 1px solid #ccc;
+		display: block;
+		float: left;
+		margin-right: 6px;
+		}
+	article > footer p.author span {
+		display: block;
+		float: left;
+		line-height: 12px;
+		}
 /*--------------------------------------------------
 Display the footer in a couple of scenarios:
 ---------------------------------------------------*/
@@ -144,6 +153,34 @@ article:hover > section.notes {
 	display: block;
 	opacity: 1;
 	height: auto; 
+	}
+
+/* the MAIN footer */
+div#container > footer {
+	font: normal .9em Helvetica, Arial,sans-serif;
+	color: #939598;
+	}
+div#container > footer > p {margin-top: 18px;}
+ul.groupmembers {
+	overflow: auto;
+	margin-top: 36px;
+	}
+ul.groupmembers li {
+	display: block;
+	float: left;
+	margin: 18px 18px 18px 0;
+	}
+ul.groupmembers li img {
+	display: block;
+	float: left;
+	margin-right: 6px;
+	border: 1px solid #ccc;
+	}
+ul.groupmembers li span {
+	display: block;
+	float: left;
+	line-height: 24px;
+	font-size: 12px;
 	}
 /*--------------------------------------------------
 QUOTES
@@ -171,7 +208,7 @@ header#home {
 	width: 880px;
 	padding: 0 10px 0 36px;
 	margin: 0 auto 18px;
-	overflow: auto;
+	overflow: hidden;
 	}
 header#home div {
 	float: left;

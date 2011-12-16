@@ -2,16 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="color:Background" content="#000000"/>
-	<meta name="color:Link" content="#ba0b00"/>
-	<meta name="color:Link Visited" content="#d4674b"/>
-	<meta name="color:Border" content="#c8c49f"/>
-	<meta name="if:Show Avatar" content="1"/>
-	<meta name="if:Show People I Follow" content="1"/>
-	<meta name="if:Show People I Follow" content="1"/>
-	<meta name="if:Show People I Follow" content="1"/>
-	<meta name="text:Disqus Shortname" content="" />
-	<meta name="image:Background" content=""/>
+	<meta name="if:Group Blog" content="0"/>
 	<title>{block:PostTitle}{PostTitle} | {/block:PostTitle}{Title}</title>
 	<title>{block:SearchPage}Search results for: {SearchQuery} | {/block:SearchPage}{block:PostSummary}{PostSummary} | {/block:PostSummary}{Title}</title>
 	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
@@ -22,16 +13,6 @@
 	<link rel="stylesheet" href="http://dl.dropbox.com/u/3915166/tumblr/css/reset.css" />
 	<link rel="stylesheet" href="http://dl.dropbox.com/u/3915166/tumblr/css/site.css" />
 	<link rel="stylesheet" href="http://dl.dropbox.com/u/3915166/tumblr/css/ui-icons.css" />
-
-	<style type="text/css">
-		body {
-			/* background-color: {color:Background}; */
-			{block:IfBackgroundImage}
-				background-image: url('{image:Background}');
-			{/block:IfBackgroundImage}
-			}
-		{CustomCSS}
-	</style>
 	<!--Make IE like HTML5-->
 	<!--[if IE]><script>document.createElement("header");document.createElement("footer");document.createElement("nav");document.createElement("article");document.createElement("section");document.createElement("aside");</script>	<![endif]-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
@@ -264,40 +245,52 @@
 				</p></footer>
 			{/block:Audio}
 
-				<!-- display this footer only when and if there are tags, notes or reblogs -->
-				<footer>
-					{block:Caption}
-						{Caption}
-					{/block:Caption}
+			<!-- leave out all this junk, unless you're on the permalink page -->
+			{block:PermalinkPage}
+			<footer>
 
-					{block:Audio}
-						<p>
-							{PlayCountWithLabel}
-							{block:ExternalAudio}
-								<a href="{ExternalAudioURL}">Download</a>
-							{/block:ExternalAudio}
-						</p>
-					{/block:Audio}
+				{block:Caption}
+					{Caption}
+				{/block:Caption}
+
+				{block:Audio}
+					<p>
+						{PlayCountWithLabel}
+						{block:ExternalAudio}
+							/ <a href="{ExternalAudioURL}">Download</a>
+						{/block:ExternalAudio}
+					</p>
+				{/block:Audio}
+				
+				{block:HasTags}
+				<ul class="ui-icons">
+				{block:Tags}<li class="ui-tag"><a href="{TagURL}">{Tag}</a></li>{/block:Tags}</ul>
+				{/block:HasTags}
+				
+				{block:NoteCount}
+				<ul class="ui-icons">
+					<li class="ui-notes">
+						<a href="{Permalink}#notes">{NoteCountWithLabel}</a>
+					</li>
+				</ul>
+				{/block:NoteCount}
+				
+				{block:RebloggedFrom}
+				<ul class="ui-icons">
+					<li class="ui-reblogged"><a href="{ReblogParentURL}" title="Reblogged from {ReblogParentName}">Reblogged from {ReblogParentName}</a></li>
+				</ul>
+				{/block:RebloggedFrom}
 					
-					{block:HasTags}
-					<ul class="ui-icons">
-					{block:Tags}<li class="ui-tag"><a href="{TagURL}">{Tag}</a></li>{/block:Tags}</ul>
-					{/block:HasTags}
-					
-					{block:NoteCount}
-					<ul class="ui-icons">
-						<li class="ui-notes">
-	                        <a href="{Permalink}#notes">{NoteCountWithLabel}</a>
-                        </li>
-                    </ul>
-					{/block:NoteCount}
-					
-					{block:RebloggedFrom}
-					<ul class="ui-icons">
-						<li class="ui-reblogged"><a href="{ReblogParentURL}" title="Reblogged from {ReblogParentName}">Reblogged from {ReblogParentName}</a></li>
-					</ul>
-					{/block:RebloggedFrom}
-				</footer>
+				{block:IfGroupBlog}
+				<p class="author">
+					<a href="{PostAuthorURL}"><img src="{PostAuthorPortraitURL-24}" alt="{PostAuthorName}" /></a>
+					<span>Posted by:<br /><a href="{PostAuthorURL}">{PostAuthorName}</a></span>
+				</p>
+				{/block:IfGroupBlog}
+			</footer>
+				
+			{/block:PermalinkPage}
+
 			</article>    
 
 			{block:Permalink}
@@ -341,10 +334,21 @@
 		</nav>
 		{/block:Pagination}
 
-	</div>	
+		{block:IfGroupBlog}
+			<footer>
+			{block:GroupMembers}
+				<ul class="groupmembers">
+					{block:GroupMember}
+						<li>
+							<a href="{GroupMemberURL}" title="{GroupMemberName}"><img src="{GroupMemberPortraitURL-24}" alt="{GroupMemberName}" /></a>
+							<span><a href="{GroupMemberURL}">{GroupMemberName}</a></span></li>
+					{/block:GroupMember}
+				</ul>
+			{/block:GroupMembers}
+			</footer>
+		{/block:IfGroupBlog}
 
-	<footer>
-	</footer>
+	</div>	
 	
 	{block:IfDisqusShortname}
 	<script type="text/javascript">
