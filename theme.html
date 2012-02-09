@@ -8,16 +8,12 @@
 	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
 	<link rel="alternate" type="application/rss+xml" href="{RSS}" />
 	<link rel="shortcut icon" href="{Favicon}">
-	
-	<!-- for now, using public Dropbox shared URLs -->
-	<link rel="stylesheet" href="http://dl.dropbox.com/u/3915166/tumblr/css/reset.css" />
-	<link rel="stylesheet" href="http://dl.dropbox.com/u/3915166/tumblr/css/site.css" />
-	<link rel="stylesheet" href="http://dl.dropbox.com/u/3915166/tumblr/css/ui-icons.css" />
+	<link rel="stylesheet" href="http://static.tumblr.com/fiwok2l/Uvelz4oe2/site.css" />
 	<!--Make IE like HTML5-->
 	<!--[if IE]><script>document.createElement("header");document.createElement("footer");document.createElement("nav");document.createElement("article");document.createElement("section");document.createElement("aside");</script>	<![endif]-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-	<script src="http://dl.dropbox.com/u/3915166/tumblr/js/jquery.masonry.min.js"></script>
-	<script src="http://dl.dropbox.com/u/3915166/tumblr/js/jquery.imagesloaded.js"></script>
+	<script src="http://static.tumblr.com/fiwok2l/v5tlz4ofq/jquery.masonry.min.js"></script>
+	<script src="http://static.tumblr.com/fiwok2l/6Ynlz4og8/jquery.imagesloaded.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			var $container = $('#primary');
@@ -28,6 +24,7 @@
 			});			
 		});
 	 </script>
+	 {customCSS}
 </head>
 <body{block:PermalinkPage} class="permalinkpage"{/block:PermalinkPage} >
 	<header id="home">
@@ -58,10 +55,10 @@
 				</ul>
 			</nav>
 
+			<!--
 			<form id="searchForm" action="/search" method="get">
 				<button type="submit">Search</button> <input id="searchField" type="text" name="q" value="{SearchQuery}" />
 			</form>
-			<!--
 			{block:Likes}
 				<h2>Stuff I Like <a href="http://www.tumblr.com/liked/by/{Name}">&hearts;</a></h2>
 				{Likes limit="5" summarize="100" width="160"}
@@ -87,13 +84,18 @@
 
 			{block:Text}
 			<article class="text">
-				<header>
-					<p><a href="{Permalink}">{block:Date}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth}{DayOfMonthWithZero}<br />{Year}</time>{/block:Date}</a></p>
 					{block:Title}
 				    <h2><a href="{Permalink}">{Title}</a></h2>
 					{/block:Title}
-				</header>
-				{Body}
+					{Body}
+					<footer><p class="ui-date">
+					<a href="{Permalink}">
+						{block:Date}
+							<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth} {DayOfMonthWithZero}, {Year}</time>
+						{/block:Date}
+					</a>
+				</p></footer>
+				
 			{/block:Text}
 
 			{block:Photo}
@@ -198,11 +200,12 @@
 						{/block:Date}
 					</a></p>
 				</header>
+				<!-- Large videos on permalink pages -->
 				{block:PermalinkPage}
-					<!-- Large videos on permalink pages -->
 					{Video-500}
 				{/block:PermalinkPage}
 				
+				<!-- Small videos on index pages -->
 				{block:IndexPage}
 					{Video-250}
 				{/block:IndexPage}
@@ -214,11 +217,12 @@
 				<header>
 					<p><a href="{Permalink}">{block:Date}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth}{DayOfMonthWithZero}<br />{Year}</time>{/block:Date}</a></p>
 				</header>
+				<!-- Large photosets on permalink pages -->
 				{block:PermalinkPage}
-					<!-- Large photosets on permalink pages -->
 					{Photoset-500}
 				{/block:PermalinkPage}
 				
+				<!-- Small photosets on index pages -->
 				{block:IndexPage}
 					{Photoset-250}
 				{/block:IndexPage}
@@ -245,7 +249,7 @@
 				</p></footer>
 			{/block:Audio}
 
-			<!-- leave out all this junk, unless you're on the permalink page -->
+			<!-- All this extra info is hidden, unless you're on the permalink page -->
 			{block:PermalinkPage}
 			<footer>
 
@@ -287,6 +291,7 @@
 					<span>Posted by:<br /><a href="{PostAuthorURL}">{PostAuthorName}</a></span>
 				</p>
 				{/block:IfGroupBlog}
+
 			</footer>
 				
 			{/block:PermalinkPage}
@@ -295,7 +300,7 @@
 
 			{block:Permalink}
 			<article class="notes">
-				<section class="notes">
+				<section class="notes" id="notes">
 					{block:PostNotes}
 						<h4>Notes:</h4>
 						{PostNotes}
@@ -323,7 +328,7 @@
 		</section>
 		{block:Pagination}
 		<nav id="paging">
-			<p>Page {CurrentPage} of {TotalPages} <span><a href="https://github.com/billkeller/tumble-soup">Tumble-Soup</a> is a custom <a href="http://tumblr.com">Tumblr</a> theme, still in the works.</span></p>
+			<p>Page {CurrentPage} of {TotalPages} <span><a href="https://github.com/billkeller/tumble-soup">Tumble-Soup</a> is a custom <a href="http://tumblr.com">Tumblr</a>.</span></p>
 
 			{block:NextPage}
 			<a href="{NextPage}">&larr; Older</a>
