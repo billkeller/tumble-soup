@@ -1,21 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="if:Group Blog" content="0"/>
 	<title>{block:PostTitle}{PostTitle} | {/block:PostTitle}{Title}</title>
-	<title>{block:SearchPage}Search results for: {SearchQuery} | {/block:SearchPage}{block:PostSummary}{PostSummary} | {/block:PostSummary}{Title}</title>
 	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
 	<link rel="alternate" type="application/rss+xml" href="{RSS}" />
 	<link rel="shortcut icon" href="{Favicon}">
-	<!-- link rel="stylesheet" href="http://static.tumblr.com/fiwok2l/Uvelz4oe2/site.css" /-->
-	<link rel="stylesheet" href="http://dl.dropbox.com/u/3915166/tumblr/css/site.css" />
-
-	<!--Make IE like HTML5-->
-	<!--[if IE]><script>document.createElement("header");document.createElement("footer");document.createElement("nav");document.createElement("article");document.createElement("section");document.createElement("aside");</script>	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/fiwok2l/DFdlzjdnx/site.css" />
+	<!--[if lt IE 9]><script src="http://static.tumblr.com/fiwok2l/qAmlz8cvn/html5shim.js"></script><![endif]-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 	<script src="http://static.tumblr.com/fiwok2l/v5tlz4ofq/jquery.masonry.min.js"></script>
-	<script src="http://static.tumblr.com/fiwok2l/6Ynlz4og8/jquery.imagesloaded.js"></script>
+	<script src="http://static.tumblr.com/fiwok2l/pPNlzjdbv/jquery.imagesloaded.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			var $container = $('#primary');
@@ -26,78 +21,56 @@
 			});			
 		});
 	 </script>
-	 {customCSS}
+	 <style type="text/css">{CustomCSS}</style>
 </head>
-<body{block:PermalinkPage} class="permalinkpage"{/block:PermalinkPage} >
+<body{block:PermalinkPage} class="permalinkpage"{/block:PermalinkPage}>
 	<header id="home">
 		<div>
 			<h1><a href="/">{Title}</a></h1>
 			<h2>{Description}</h2>
 		</div>
 		<aside id="secondary">
-			{block:IfShowAvatar}
-			<!-- img src="{PortraitURL-128}" -->
-			{/block:IfShowAvatar}
 			<nav>
-			{block:HasPages}
-				<hr>
-				<ul id="pages">
-					{block:Pages}
-					<li><a href="{URL}">{Label}</a></li>
-					{/block:Pages}
-				</ul>
-			{/block:HasPages}
 				<ul>
-					{block:AskEnabled}
-					<li><a href="/ask">{AskLabel}</a></li>
-					{/block:AskEnabled}
 					<li><a href="/archive">Archive</a></li>
 					<li><a href="/mobile">Mobile</a></li>
 					<li><a href="{RSS}">RSS</a></li>
+					{block:HasPages}
+						{block:Pages}
+							<li><a href="{URL}">{Label}</a></li>
+						{/block:Pages}
+					{/block:HasPages}
+					{block:AskEnabled}
+						<li><a href="/ask">{AskLabel}</a></li>
+					{/block:AskEnabled}
+					
 				</ul>
 			</nav>
-
-			<!--
-			<form id="searchForm" action="/search" method="get">
-				<button type="submit">Search</button> <input id="searchField" type="text" name="q" value="{SearchQuery}" />
-			</form>
-			{block:Likes}
-				<h2>Stuff I Like <a href="http://www.tumblr.com/liked/by/{Name}">&hearts;</a></h2>
-				{Likes limit="5" summarize="100" width="160"}
-			{/block:Likes}
-
-			{block:IfShowPeopleIFollow}
-			{block:Following}
-			<h2>Following</h2>
-			<ul id="following">
-			{block:Followed}<li><a href="{FollowedURL}" title="{FollowedTitle}"><img src="{FollowedPortraitURL-24}" /></a></li>{/block:Followed}
-			</ul>
-			{/block:Following}
-			{/block:IfShowPeopleIFollow}
-			-->
 		</aside>
-		{block:SearchPage}
-			<h2>{SearchResultCount} results for <strong>"{SearchQuery}"</strong></h2>
-		{/block:SearchPage}		
 	</header>
 	<div id="container">
 		<section id="primary">
             {block:Posts}
 
 			{block:Text}
+			<!-- user created pages and 'ask' page use this post-type as well -->
 			<article class="text">
 					{block:Title}
-				    <h2><a href="{Permalink}">{Title}</a></h2>
+				    <h2>
+						{block:IndexPage}<a href="{Permalink}">{Title}</a>{/block:IndexPage}					
+						{block:PermalinkPage}{Title}{/block:PermalinkPage}
+					</h2>
 					{/block:Title}
 					{Body}
-					<footer><p class="ui-date">
-					<a href="{Permalink}">
-						{block:Date}
-							<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth} {DayOfMonthWithZero}, {Year}</time>
-						{/block:Date}
-					</a>
-				</p></footer>
-				
+					{block:Date}
+					<footer>
+						<p class="ui-date">
+							<a href="{Permalink}">
+								<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth} {DayOfMonthWithZero}, {Year}</time>
+							</a>
+						</p>
+					</footer>
+					{/block:Date}
 			{/block:Text}
 
 			{block:Photo}
@@ -161,9 +134,6 @@
 			
 			{block:Answer}
 				<article class="answer">
-					<header>
-						<p><a href="{Permalink}">{block:Date}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth}{DayOfMonthWithZero}<br />{Year}</time>{/block:Date}</a></p>
-					</header>
 					<div class="by">
 						{Asker} asked ...
 					</div>
@@ -176,6 +146,14 @@
 					<div class="answer">
 						{Answer}
 					</div>
+					
+					<footer><p class="ui-date">
+					<a href="{Permalink}">
+						{block:Date}
+							<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth} {DayOfMonthWithZero}, {Year}</time>
+						{/block:Date}
+					</a></p>
+				</footer>
 			{/block:Answer}
 			
 			{block:Chat}
@@ -306,22 +284,7 @@
 					{block:PostNotes}
 						<h4>Notes:</h4>
 						{PostNotes}
-					{/block:PostNotes}
-	
-					{block:IfDisqusShortname}
-					<h2>Comments</h2>
-					<script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>
-					<div id="disqus_thread"></div>
-					<script type="text/javascript">
-					  (function() {
-					   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-					   dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
-					   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-					  })();
-					</script>
-					<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
-					<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-					{/block:IfDisqusShortname}
+					{/block:PostNotes}						
 				</section>
 			</article>
 			{/block:Permalink}
@@ -330,7 +293,7 @@
 		</section>
 		{block:Pagination}
 		<nav id="paging">
-			<p>Page {CurrentPage} of {TotalPages} <span><a href="https://github.com/billkeller/tumble-soup">Tumble-Soup</a> is a custom <a href="http://tumblr.com">Tumblr</a></span> theme.</p>
+			<p>Page {CurrentPage} of {TotalPages} <span><a href="https://github.com/billkeller/tumble-soup">Tumble-Soup</a> is a <a href="http://tumblr.com">Tumblr</a> theme.</span></p>
 
 			{block:NextPage}
 			<a href="{NextPage}">&larr; Older</a>
@@ -355,16 +318,6 @@
 			</footer>
 		{/block:IfGroupBlog}
 
-	</div>	
-	
-	{block:IfDisqusShortname}
-	<script type="text/javascript">
-	var disqus_shortname = '{text:Disqus Shortname}';
-	(function () {
-	  var s = document.createElement('script'); s.async = true;
-	  s.src = 'http://disqus.com/forums/{text:Disqus Shortname}/count.js';
-	  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-	}());
-	</script>
-    {/block:IfDisqusShortname}
+	</div>
+</body>	
 </html>

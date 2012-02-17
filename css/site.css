@@ -8,10 +8,6 @@
 	and the HTML5 Boilerplate	:: http://html5boilerplate.com
 	
 -------------------------------------------------------------------------------*/
-
-/* Let's default this puppy out - formerly of reset.css, now rolled into site.css
--------------------------------------------------------------------------------*/
-
 html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -20,10 +16,9 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
 	font-size: 100%;
 	vertical-align: baseline;
 	background: transparent;
-}									
+	}									
 
 article, aside, figure, footer, header, hgroup, nav, section {display: block;}
-
 /* Responsive images and other embedded objects
    Note: keeping IMG here will cause problems if you're using foreground images as sprites.
    If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
@@ -239,7 +234,7 @@ article {
 	---------------------------------------------------*/
 	article.photoset {width: 250px;}
 	div.html_photoset + p {display: none;}
-	
+	article.photoset footer {width: 500px;}
 	/*--------------------------------------------------
 	Links
 	---------------------------------------------------*/
@@ -263,6 +258,15 @@ article {
 		font: normal 1em/18px 'Helvetica Neue', Helvetica, Arial,sans-serif;
 		margin: 9px 0;
 		}
+	article.text ul {
+		color: #666;
+		font: normal 1em/18px 'Helvetica Neue', Helvetica, Arial,sans-serif;
+		margin: 9px 0 9px 18px;
+		}
+	article.text ul li {
+		list-style: disc outside;
+		margin-bottom: 3px;
+		}
 	article.text h2 {
 		font-weight: normal;
 		font-size: 1em;
@@ -272,6 +276,14 @@ article {
 	---------------------------------------------------*/
 	p.chat-line {padding: 4px;}
 	p.chat-line.odd {background-color: #ddd;}
+	
+	/*--------------------------------------------------
+	Answers
+	---------------------------------------------------*/
+	div.by,
+	div.question,
+	div.answer {padding: 4px;}
+	div.by {background-color: #ddd;}
 	
 	/*--------------------------------------------------
 	used on individual posts
@@ -315,8 +327,8 @@ hidden footer across the bottom of each post (article)
 ------------------------------------------------------*/
 /* info bits across the bottom of each post */
 article > footer {
-	/* display: none; */
 	-webkit-transition: opacity .5s ease-out;
+	filter: alpha(opacity=0);
 	opacity: 0;
 	height: 0;
 	overflow: hidden;
@@ -346,6 +358,7 @@ article:hover > footer,
 .permalinkpage article > footer,
 article:hover > section.notes {
 	display: block;
+	filter: alpha(opacity=100);
 	opacity: 1;
 	height: auto; 
 	}
@@ -407,12 +420,15 @@ header#home {
 	}
 header#home div {
 	float: left;
-	width: 500px;
+	max-width: 690px;
 	}
 	header#home h1 {
-		font: bold 6em/77px 'Helvetica Neue', Helvetica, Arial,sans-serif;
+		font: bold 6em/77px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 		text-transform: uppercase;
 		letter-spacing: -.1em;
+		/* smooths out our title a bit */
+		text-shadow: #000 0 0 1px;
+		display: block;
 		}
 	header#home h2 {
 		color: #636363;
@@ -428,40 +444,40 @@ header#home div {
 		header#home a:hover,
 		header#home a:active,
 		header#home a:focus {
-			color: #ccc;
 			color: #666;
 			text-decoration: none;
 			}
 	header#home aside {
 		float: right;
-		width: 230px;
+		width: 150px;
 		margin-right: 39px;
 		}
 	header#home form {float: right;}
 	header form input[type="text"] {
-		width: 150px;
+		width: 100px;
 		margin: 0 0 0 5px;
-		border: 1px solid #000;
+		border: 1px solid #ccc;
 		float: left;
+		text-align: right;
+		font: normal 10px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		color: #666;
 		}
 	form#searchForm {display: none;}
-	header form button {
-		float: left;
-		text-indent: -9999px;
-		background: url(http://dl.dropbox.com/u/3915166/tumblr/search_icon.png) 0 0 no-repeat transparent;
-		width: 15px;
-		height: 19px;
-		border-style: none;
+	header form button {}
+	header form button:hover {
+		filter: alpha(opacity=50);
+		opacity: .5;
 		}
-	header form button:hover {opacity: .5;}
 header#home nav {
 	float: right;
-	margin-bottom: 18px;
+	margin-bottom: 9px;
 	text-transform: uppercase;
 	}
 header#home nav li {
-	font: bold 1.8em/26px 'Helvetica Neue', Helvetica, Arial,sans-serif;
+	font: bold 1.8em/26px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	text-align: right;
+	/* smooths out our fonts a bit */
+	text-shadow: #000 0 0 1px;
 	}
 header#home nav > ul a,
 header#home nav > ul a:link,
@@ -482,6 +498,10 @@ dates, date links
 #primary header {
 	display: block;
 	-webkit-transition: opacity .5s ease-out;
+	-moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+	filter: alpha(opacity=0);
 	opacity: 0;
 	height: 0;
 	position: absolute;
@@ -490,27 +510,33 @@ dates, date links
 	text-transform: uppercase;
 	font: bold 3em/38px 'Helvetica Neue', Helvetica, Arial,sans-serif;
 	letter-spacing: -.01em;
+	background-color: #fff;
 	background-color: hsla(0, 100%, 100%, .6);
 	padding: 6px;
 	border-right: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 	}
+	#primary header time {
+		display: none;
+		}
+
 	#primary article:hover header {
+		filter: alpha(opacity=70);
 		opacity: 1;
 		height: auto;
 		}
+		#primary article:hover header time {
+			display: block;
+			}
 #primary header a,
 #primary header a:link,
 #primary header a:visited {
 	color: #000;
 	text-decoration: none;
+	-moz-text-shadow: #fff 2px 2px 1px;
 	text-shadow: #fff 2px 2px 1px;
 	}
 
-/*--------------
-photos
----------------*/
-div.photo img {display: block;}
 /*------------------------------------------------------------------
 UI-icons, formally of ui-icons.css, now rolled into site.css
 -------------------------------------------------------------------*/
