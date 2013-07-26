@@ -114,22 +114,10 @@ button {width: auto; overflow: visible;}
 .clearfix:after { clear: both; }  
 .clearfix { zoom: 1; }  
 
-
-
-/* Ok, this is where the fun starts.
--------------------------------------------------------------------------------*/
-
 /* new Linux- and Windows-friendly sans-serif font stack: http://mky.be/fontstack */
 body {font: 13px Helmet, Freesans, sans-serif;}
 
-/* using local fonts? make sure to read up on Paul Irish's 
-	Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
-
-/* we like off-black for text */
 body, select, input, textarea {color: #333;}
-
-a {color: #03f;}
-a:hover {color: #69f;}
 
 /* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
@@ -192,6 +180,7 @@ a:focus {
 	color: #000;
 	text-decoration: underline;
 	}
+
 /*------------------------
 General structure
 -------------------------*/
@@ -239,16 +228,32 @@ article {
 	Links
 	---------------------------------------------------*/
 	article.link {}
-	article.link p {
+	article.link h2 {
+		font: normal 2.5em/32px 'Helvetica Neue', Helvetica, Arial,sans-serif;
+		color: #fff;
+		background-color: #000;
+		padding: 9px;
+		}
+	article.link h2 a,
+	article.link h2 a:link,
+	article.link h2 a:visited,
+	article.quote a,
+	article.quote a:link,
+	article.quote a:visited	{
+		color: #fff;
+		}
+	article.link h2 a:hover,
+	article.link h2 a:active,
+	article.quote a:hover,
+	article.quote a:active	{
+		color: #fff;
+		text-decoration: none;
+		}
+	article.link > p {
 		color: #666;
 		font: normal 1em/20px 'Helvetica Neue', Helvetica, Arial,sans-serif;
 		margin: 9px 0;
 		}
-	article.link h2 {
-		font-weight: normal;
-		font-size: 1em;
-		}
-
 	/*--------------------------------------------------
 	Text
 	---------------------------------------------------*/
@@ -257,6 +262,7 @@ article {
 		color: #666;
 		font: normal 1em/18px 'Helvetica Neue', Helvetica, Arial,sans-serif;
 		margin: 9px 0;
+		
 		}
 	article.text ul {
 		color: #666;
@@ -274,17 +280,39 @@ article {
 	/*--------------------------------------------------
 	Chats
 	---------------------------------------------------*/
-	p.chat-line {padding: 4px;}
-	p.chat-line.odd {background-color: #ddd;}
+	p.chat-line {
+		padding: 4px;
+		font: normal 2.5em/32px 'Helvetica Neue', Helvetica, Arial,sans-serif;
+		color: #fff;
+		background-color: #000;
+		border-bottom: 1px solid #fff;
+		}
+	p.chat-line.odd {
+		background-color: #000;
+		}
 	
 	/*--------------------------------------------------
 	Answers
 	---------------------------------------------------*/
 	div.by,
 	div.question,
-	div.answer {padding: 4px;}
-	div.by {background-color: #ddd;}
-	
+	div.answer {
+		padding: 4px;
+		font: normal 2.5em/32px 'Helvetica Neue', Helvetica, Arial,sans-serif;
+		color: #fff;
+		background-color: #000;
+		border-bottom: 1px solid #fff;
+		}
+	div.by {font-size: 1em;}
+	div.by {background-color: #000;}
+	div.by a,
+	div.by a:link,
+	div.by a:visited {}
+	div.by a:hover,
+	div.by a:active {
+		color: #fff;
+		text-decoration: none;
+		}
 	/*--------------------------------------------------
 	used on individual posts
 	---------------------------------------------------*/
@@ -293,6 +321,9 @@ article {
 		max-width: none;
 		width: auto;
 		}
+	body.permalinkpage article {
+		border-style: none;
+	}
 nav#paging,
 .notes {
 	font: normal .9em Helvetica, Arial,sans-serif;
@@ -325,7 +356,6 @@ div.active { }
 /*-----------------------------------------------------
 hidden footer across the bottom of each post (article)
 ------------------------------------------------------*/
-/* info bits across the bottom of each post */
 article > footer {
 	-webkit-transition: opacity .5s ease-out;
 	filter: alpha(opacity=0);
@@ -395,7 +425,7 @@ QUOTES
 ---------------------------------------------------*/
 article.quote blockquote,
 article.quote > p {
-	font: bold 2.5em/32px 'Helvetica Neue', Helvetica, Arial,sans-serif;
+	font: normal 2.5em/32px 'Helvetica Neue', Helvetica, Arial,sans-serif;
 	color: #fff;
 	background-color: #000;
 	padding: 9px;
@@ -404,6 +434,10 @@ article.quote > p {
 		content: "- ";
 		padding-top: ;
 		}
+article.quote > p {
+	font-size: 1.8em;
+	line-height: .9;
+	}
 nav#paging {
 	float: none;
 	clear: both;
@@ -435,18 +469,6 @@ header#home div {
 		font-size: 1em;
 		font-weight: normal;
 		}
-		header#home a,
-		header#home a:link,
-		header#home a:visited {
-			color: #000;
-			text-decoration: none;
-			}
-		header#home a:hover,
-		header#home a:active,
-		header#home a:focus {
-			color: #666;
-			text-decoration: none;
-			}
 	header#home aside {
 		float: right;
 		width: 150px;
@@ -479,16 +501,15 @@ header#home nav li {
 	/* smooths out our fonts a bit */
 	text-shadow: #000 0 0 1px;
 	}
-header#home nav > ul a,
-header#home nav > ul a:link,
-header#home nav > ul a:visited {
+header#home a,
+header#home a:link,
+header#home a:visited {
 	color: #000;
 	text-decoration: none;
 	}
-header#home nav > ul a:hover,
-header#home nav > ul a:active,
-header#home nav > ul a:focus {
-	color: #ccc;
+header#home a:hover,
+header#home a:active,
+header#home a:focus {
 	color: #666;
 	}
 /*------------------------------------------
@@ -536,6 +557,8 @@ dates, date links
 	-moz-text-shadow: #fff 2px 2px 1px;
 	text-shadow: #fff 2px 2px 1px;
 	}
+/* Let's not display this header on our permalink page */
+.permalinkpage #primary header {display: none;}
 
 /*------------------------------------------------------------------
 UI-icons, formally of ui-icons.css, now rolled into site.css
@@ -603,6 +626,7 @@ ul.ui-icons {
 
 		/*--------------------------------------------------
 		EXTERNAL LINKS (link posts)
+		EXTERNAL LINKS (link posts)
 			this does not use our usual, ui-icons setup,
 			so we need to set font and font-size
 		---------------------------------------------------*/
@@ -625,5 +649,22 @@ ul.ui-icons {
 			color: #939598;
 			padding-right: 3px;
 			}
-		
+/* iPad [portrait + landscape] */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	header#home h1 {
+		text-shadow: #000 0 0 0;
+		font-family: HelveticaNeue-Bold, Helvetica;
+		font-weight: normal;
+		}
+	header#home nav li {
+		text-shadow: #000 0 0 1px;
+		font-family: HelveticaNeue-Bold, Helvetica;
+		font-weight: normal;
+		}
+}
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-device-width: 480px) {
+	
+}		
 		

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
 	<meta name="if:Group Blog" content="0"/>
 	<title>{block:PostTitle}{PostTitle} | {/block:PostTitle}{Title}</title>
 	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
 	<link rel="alternate" type="application/rss+xml" href="{RSS}" />
 	<link rel="shortcut icon" href="{Favicon}">
-	<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/fiwok2l/DFdlzjdnx/site.css" />
+	<!-- link rel="stylesheet" type="text/css" href="http://static.tumblr.com/fiwok2l/y02lzzz2h/site.css" / -->
+	<link rel="stylesheet" type="text/css" href="http://dl.dropbox.com/u/3915166/tumblr/css/site.css" />
 	<!--[if lt IE 9]><script src="http://static.tumblr.com/fiwok2l/qAmlz8cvn/html5shim.js"></script><![endif]-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 	<script src="http://static.tumblr.com/fiwok2l/v5tlz4ofq/jquery.masonry.min.js"></script>
@@ -20,8 +22,10 @@
 				});
 			});			
 		});
-	 </script>
-	 <style type="text/css">{CustomCSS}</style>
+	</script>
+	<style type="text/css">
+		{CustomCSS}
+	</style>
 </head>
 <body{block:PermalinkPage} class="permalinkpage"{/block:PermalinkPage}>
 	<header id="home">
@@ -119,21 +123,28 @@
 
 			{block:Link}
 			<article class="link">
+				<header><p>
+					<a href="{Permalink}">
+						{block:Date}
+							<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth}{DayOfMonthWithZero}<br />{Year}</time>
+						{/block:Date}
+					</a>
+				</p></header>
 				<h2><a href="{URL}" {Target}>{Name}</a></h2>
 				{block:Description}
 					{Description}
 				{/block:Description}
-				<footer><p class="ui-date">
-					<a href="{Permalink}">
-						{block:Date}
-							<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth} {DayOfMonthWithZero}, {Year}</time>
-						{/block:Date}
-					</a>
-				</p></footer>
 			{/block:Link}
 			
 			{block:Answer}
 				<article class="answer">
+					<header><p>
+						<a href="{Permalink}">
+							{block:Date}
+								<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth}{DayOfMonthWithZero}<br />{Year}</time>
+							{/block:Date}
+						</a></p>
+					</header>
 					<div class="by">
 						{Asker} asked ...
 					</div>
@@ -146,29 +157,20 @@
 					<div class="answer">
 						{Answer}
 					</div>
-					
-					<footer><p class="ui-date">
-					<a href="{Permalink}">
-						{block:Date}
-							<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth} {DayOfMonthWithZero}, {Year}</time>
-						{/block:Date}
-					</a></p>
-				</footer>
 			{/block:Answer}
 			
 			{block:Chat}
 			<article class="chat">
+				<header><p>
+					<a href="{Permalink}">
+						{block:Date}
+							<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth}{DayOfMonthWithZero}<br />{Year}</time>
+						{/block:Date}
+					</a></p>
+				</header>
 				{block:Lines}
 				<p class="chat-line {Alt}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</p>
 				{/block:Lines}
-
-				<footer><p class="ui-date">
-					<a href="{Permalink}">
-						{block:Date}
-							<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth} {DayOfMonthWithZero}, {Year}</time>
-						{/block:Date}
-					</a></p>
-				</footer>
 			{/block:Chat}
 
 			{block:Video}
@@ -231,8 +233,16 @@
 
 			<!-- All this extra info is hidden, unless you're on the permalink page -->
 			{block:PermalinkPage}
-			<footer>
+				<footer>
 
+				{block:Date}
+					<p class="ui-date">
+						<a href="{Permalink}">
+							<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate>{ShortMonth} {DayOfMonthWithZero}, {Year}</time>
+						</a>
+					</p>
+				{/block:Date}
+					
 				{block:Caption}
 					{Caption}
 				{/block:Caption}
@@ -247,8 +257,9 @@
 				{/block:Audio}
 				
 				{block:HasTags}
-				<ul class="ui-icons">
-				{block:Tags}<li class="ui-tag"><a href="{TagURL}">{Tag}</a></li>{/block:Tags}</ul>
+					<ul class="ui-icons">
+						{block:Tags}<li class="ui-tag"><a href="{TagURL}">{Tag}</a></li>{/block:Tags}
+					</ul>
 				{/block:HasTags}
 				
 				{block:NoteCount}
@@ -273,33 +284,34 @@
 				{/block:IfGroupBlog}
 
 			</footer>
-				
 			{/block:PermalinkPage}
 
 			</article>    
 
-			{block:Permalink}
-			<article class="notes">
-				<section class="notes" id="notes">
-					{block:PostNotes}
-						<h4>Notes:</h4>
-						{PostNotes}
-					{/block:PostNotes}						
-				</section>
-			</article>
-			{/block:Permalink}
+			{block:PermalinkPage}
+				{block:PostNotes}
+				<article class="notes">
+					<section class="notes" id="notes">
+							<h4>{lang:Notes}:</h4>
+							{PostNotes}
+						{/block:PostNotes}						
+					</section>
+				</article>
+				{/block:PostNotes}
+			{/block:PermalinkPage}
 
 			{/block:Posts}
 		</section>
+		
 		{block:Pagination}
-		<nav id="paging">
+			<nav id="paging">
 			<p>Page {CurrentPage} of {TotalPages} <span><a href="https://github.com/billkeller/tumble-soup">Tumble-Soup</a> is a <a href="http://tumblr.com">Tumblr</a> theme.</span></p>
 
 			{block:NextPage}
-			<a href="{NextPage}">&larr; Older</a>
+			<a href="{NextPage}">&larr; {lang:Older}</a>
 			{/block:NextPage}
 			{block:PreviousPage}
-			<a href="{PreviousPage}">Newer &rarr;</a>
+			<a href="{PreviousPage}">{lang:Newer} &rarr;</a>
 			{/block:PreviousPage}
 		</nav>
 		{/block:Pagination}
@@ -318,6 +330,6 @@
 			</footer>
 		{/block:IfGroupBlog}
 
-	</div>
+	</div><!--/#container-->
 </body>	
 </html>
